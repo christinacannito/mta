@@ -1,4 +1,12 @@
 
-<h1>Welcome Home</h1>
-<p>welcome to Sammy page</p>
-<p>Sign Up<%= link_to " here.", "#"%></p>
+<%if user_signed_in?%>
+<h1><%= "welcome back!" %></h1>
+<%else%>
+<div class="hero-unit">
+<h1>Hallo, Welcome aboard </h1>
+<p>
+  <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"%>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large"%>
+</p>
+</div>
+<%end%>
