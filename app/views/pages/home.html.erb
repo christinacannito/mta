@@ -4,9 +4,13 @@
 <%else%>
 <div class="hero-unit">
 <h1>Hallo, Welcome aboard </h1>
+
 <p>
   <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"%>
   <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large"%>
 </p>
 </div>
+<%end%>
+<% Service.all.each do |element|%>
+<%=  element.name %>
 <%end%>
