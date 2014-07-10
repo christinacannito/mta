@@ -29,7 +29,11 @@ require 'nokogiri'
    subway_list.zip(service_list)[0..9]
   end
 
+#Before it seeds, it deletes all previous seeds
+puts "deleting old seeds"
+Service.delete_all
 puts "loading"
+
 output.each do |subway_array|
   Service.create(name: subway_array[0], traffic: subway_array[1])
   end

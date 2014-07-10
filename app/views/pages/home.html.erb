@@ -11,6 +11,22 @@
 </p>
 </div>
 <%end%>
-<% Service.all.each do |element|%>
-<%=  element.name %>
-<%end%>
+
+<table style="width:300px">
+  <thead>
+    <tr>
+      <th>Train name</th>
+      <th>Traffic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Service.all.each do |element|%><tr>
+        <td><%=  element.name %></td>
+        <td><%=  element.traffic %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
