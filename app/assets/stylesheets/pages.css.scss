@@ -2,21 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//body {
+body {
 
-  //background-image:  image-url("4.png");
-  //`background-size: cover;
-  //background-repeat:repeat-y;
+  background-image:  image-url("g9.gif");
+  background-size: cover;
+  background-repeat:repeat-y;
 
-  //background-position:top center;
+  background-position:top center;
 
-  //background-attachment:fixed;
-
-
- 
-//}
-table,th,td
-{
-border:1px solid black;
+  background-attachment:fixed; 
 }
+//table,th,td
+//{
+//border:1px solid black;
+//}
+
+
+table.imagetable {
+  font-family: verdana,arial,sans-serif;
+  font-size:11px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #999999;
+  border-collapse: collapse;
+}
+table.imagetable th {
+  background:#b5cfd2 url('cell-blue.jpg');
+  border-width: 1px;
+  padding: 16px;
+  border-style: solid;
+  border-color: #999999;
+}
+table.imagetable td {
+  background:#dcddc0 url('cell-grey.jpg');
+  border-width: 1px;
+  padding: 16px;
+  border-style: solid;
+  border-color: #999999;
+}
+
+
 
