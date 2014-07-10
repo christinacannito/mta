@@ -21,7 +21,7 @@ gem 'devise', '~>3.1.0.rc2'
 group :production do
   gem "pg"
 end
-
+gem 'nokogiri'
 group :development, :test do 
 gem 'sqlite3'
 end
