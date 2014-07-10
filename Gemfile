@@ -27,7 +27,7 @@ gem 'sqlite3'
 end
 
 #gem 'rails_12factor'
-gem 'whenever'
+gem 'whenever', :require => false
 gem 'spring',        group: :development
 gem 'pry'
 
