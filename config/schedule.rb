@@ -13,6 +13,7 @@ every 1.minute do
 rake "db:seed"
 end
 
+
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"

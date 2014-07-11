@@ -20,13 +20,17 @@
       <!-- <th colspan="3"></th> -->
     </tr>
   </thead>
-
+<div class="hero-unit">
+<h3><%=Service.last.created_at%></h3>
+</div>
   <tbody>
     <% Service.all.each do |element|%><tr>
     <td><b><font size="3" color="black"><%=  element.name %></font></b></td>
-    <td><b><font size="3" color="black"><%=  element.traffic %></font></b></td>  
+    <td><b><font size="3" color="black"><%=  element.traffic %></font></b></td> 
+    <td><b><font size="3" color="black"><%=  element.description %></font></b></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
 

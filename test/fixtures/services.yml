@@ -3,7 +3,9 @@
 one:
   name: MyString
   traffic: MyString
+  description: MyString
 
 two:
   name: MyString
   traffic: MyString
+  description: MyString
