@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  traffic: MyString
-  description: MyString
+  email: MyString
+  phone_number: 1
 
 two:
   name: MyString
-  traffic: MyString
-  description: MyString
+  email: MyString
+  phone_number: 1

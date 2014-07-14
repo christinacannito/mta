@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contacts
+
   #resources :pins
 
   # devise_for :views
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
   get "setting" => "pages#setting"
+ 
+  
   
    
 
