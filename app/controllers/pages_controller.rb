@@ -8,5 +8,5 @@ class PagesController < ApplicationController
   
   def sitting
   end
-
+  
 end
