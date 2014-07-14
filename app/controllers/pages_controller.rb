@@ -6,7 +6,10 @@ class PagesController < ApplicationController
   def about
   end
   
-  def sitting
+  def setting
+  end
+
+  def contacts
   end
   
 end
