@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def about
   end
   
-  def my_settings
+  def recipients
   end
 
   def legal

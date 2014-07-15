@@ -1,6 +1,6 @@
-class CreateMySettings < ActiveRecord::Migration
+class CreateRecipients < ActiveRecord::Migration
   def change
-    create_table :my_settings do |t|
+    create_table :recipients do |t|
       t.string :first_name
       t.string :last_name
       t.integer :phone_number
@@ -11,4 +11,3 @@ class CreateMySettings < ActiveRecord::Migration
     end
   end
 end
-###

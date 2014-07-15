@@ -1,0 +1,31 @@
+<div class="hero-unit">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @recipient.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @recipient.last_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @recipient.phone_number %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @recipient.email_address %>
+</p>
+
+<p>
+  <strong>Email template:</strong>
+  <%= @recipient.email_template %>
+</p>
+
+<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+<%= link_to 'Back', recipients_path %>
+</div>
