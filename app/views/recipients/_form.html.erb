@@ -1,10 +1,10 @@
-<%= form_for(@my_setting) do |f| %>
-  <% if @my_setting.errors.any? %>
+<%= form_for(@recipient) do |f| %>
+  <% if @recipient.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@my_setting.errors.count, "error") %> prohibited this my_setting from being saved:</h2>
+      <h2><%= pluralize(@recipient.errors.count, "error") %> prohibited this recipient from being saved:</h2>
 
       <ul>
-      <% @my_setting.errors.full_messages.each do |message| %>
+      <% @recipient.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
