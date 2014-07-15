@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "setting" => "pages#setting"
   get "contacts" => "pages#contacts"
-  
+  get "legal" => "pages#legal"
   
    
 
