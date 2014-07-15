@@ -14,8 +14,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
+
 
 
 //Flying Letters script- by Matthias (info@freejavascripts.f2s.com)
