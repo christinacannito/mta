@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   #   get '/logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   # end
 
-  root "pages#home"
+  root "pages#legal"
   get "about" => "pages#about"
   get "legal" => "pages#legal"
   get "recipients" => "pages#recipients"
