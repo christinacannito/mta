@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :recipients
+
+  
   resources :contacts
 
   #resources :pins
@@ -16,10 +19,8 @@ Rails.application.routes.draw do
 
   root "pages#home"
   get "about" => "pages#about"
-  get "setting" => "pages#setting"
-  get "contacts" => "pages#contacts"
   get "legal" => "pages#legal"
-  
+  get "recipients" => "pages#recipients"
    
 
   # The priority is based upon order of creation: first created -> highest priority.

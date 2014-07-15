@@ -1,0 +1,36 @@
+<div class="hero-unit">
+<h1>Listing recipients</h1>
+</div>
+
+<table class="imagetable">
+  <thead>
+    <tr>
+      <th><font size="5" color="black">First name</font></th>
+      <th><font size="5" color="black">Last name</font></th>
+      <th><font size="5" color="black">Phone number</font></th>
+      <th><font size="5" color="black">Email address</font></th>
+      <th><font size="5" color="black">Email template</font></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipients.each do |recipient| %>
+      <tr>
+        <td><b><font size="3" color="black"><%= recipient.first_name %></font></b>
+        <td><b><font size="3" color="black"><%= recipient.last_name %></font></b>
+        <td><b><font size="3" color="black"><%= recipient.phone_number %></font></b>
+        <td><b><font size="3" color="black"><%= recipient.email_address %></font></b>
+        <td><b><font size="3" color="black"><%= recipient.email_template %></font></b>
+        <td><%= link_to 'Show', recipient %></td>
+        <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
+        <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="hero-unit">
+<%= link_to 'New Recipient', new_recipient_path %>
+</div>
