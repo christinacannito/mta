@@ -11,3 +11,4 @@ class CreateMySettings < ActiveRecord::Migration
     end
   end
 end
+###
