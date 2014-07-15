@@ -1,0 +1,30 @@
+<div class="hero-unit">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @my_setting.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @my_setting.last_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @my_setting.phone_number %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @my_setting.email_address %>
+</p>
+
+<p>
+  <strong>Email template:</strong>
+  <%= @my_setting.email_template %>
+</p>
+</div>
+<%= link_to 'Edit', edit_my_setting_path(@my_setting) %> |
+<%= link_to 'Back', my_settings_path %>
