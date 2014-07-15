@@ -6,11 +6,9 @@ class PagesController < ApplicationController
   def about
   end
   
-  def setting
+  def my_settings
   end
 
-  def contacts
-  end
   def legal
   end
 end
