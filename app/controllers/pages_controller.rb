@@ -11,5 +11,6 @@ class PagesController < ApplicationController
 
   def contacts
   end
-  
+  def legal
+  end
 end
