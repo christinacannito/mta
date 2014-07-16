@@ -27,8 +27,11 @@ Rails.application.routes.draw do
   get "recipients" => "pages#recipients"
   get "alerts" => "recipients#alerts"
   get "go" => "alerts#go", as: 'go_alert'
+  get "setting" => "pages#setting"
 
-
+  #get "/appointmentreminder/makecall" => "twilio#makecall"
+  
+   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
