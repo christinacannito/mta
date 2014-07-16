@@ -53,29 +53,20 @@ require 'nokogiri'
   def output
    @train_name_array.zip(@train_status_array)
   end
-<<<<<<< HEAD
 
-=======
-  
- 
->>>>>>> ac10c6742c7f3215ec7ee2b401b8b248f1309be1
 puts "deleting old seeds"
 descriptive_status
 Service.delete_all
 puts "loading"
 output.each do |subway_array|
-<<<<<<< HEAD
+
 
   Service.create(name: subway_array[0], traffic: subway_array[1])
   end
 puts Service.count
 puts "finished loading"
-=======
-  Service.create(name: subway_array[0], traffic: subway_array[1], description: subway_array[2])
-  end
->>>>>>> ac10c6742c7f3215ec7ee2b401b8b248f1309be1
 
-puts "finished loading"
+
 
     
   
