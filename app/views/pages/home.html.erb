@@ -1,9 +1,11 @@
-  
 <%if user_signed_in?%>
-<h1><%= "welcome back!" %></h1>
+<div class="hero-unit">
+<h2><%= "welcome back!" %></h2>
+</div>
+
 <%else%>
 <div class="hero-unit">
-<h1>Hello, Welcome aboard </h1>
+<h2>Hello, Welcome aboard </h2>
 </div>
 <p>
   <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"%>

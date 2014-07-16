@@ -6,7 +6,9 @@ class PagesController < ApplicationController
   def about
   end
   
-  def sitting
+  def recipients
   end
 
+  def legal
+  end
 end

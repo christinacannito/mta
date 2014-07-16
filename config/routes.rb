@@ -1,15 +1,33 @@
 Rails.application.routes.draw do
+  resources :recipients
+
+  
+  resources :contacts
+
   #resources :pins
 
   # devise_for :views
   # devise_for :installs
   devise_for :users
-  root "pages#home"
+
+  # devise_for :users, :controllers => {:sessions => 'devise/sessions', :registrations => 'devise/registrations',
+  #                                     :passwords => 'devise/passwords'}, :skip => [:sessions] do
+  #   get '/login' => 'devise/sessions#new', :as => :new_user_session
+  #   post '/login' => 'devise/sessions#create', :as => :user_session
+  #   get '/logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+  # end
+
+  root "pages#legal"
   get "about" => "pages#about"
+<<<<<<< HEAD
   get "setting" => "pages#setting"
 
   #get "/appointmentreminder/makecall" => "twilio#makecall"
   
+=======
+  get "legal" => "pages#legal"
+  get "recipients" => "pages#recipients"
+>>>>>>> ac10c6742c7f3215ec7ee2b401b8b248f1309be1
    
 
   # The priority is based upon order of creation: first created -> highest priority.

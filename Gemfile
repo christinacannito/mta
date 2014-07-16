@@ -17,7 +17,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass'
-gem 'devise', '~>3.1.0.rc2' 
+gem 'devise'
 group :production do
   gem "pg"
 end
@@ -25,7 +25,7 @@ gem 'nokogiri'
 group :development, :test do 
 gem 'sqlite3'
 end
-
+gem 'twilio-ruby'
 #gem 'rails_12factor'
 gem 'whenever', :require => false
 gem 'spring',        group: :development

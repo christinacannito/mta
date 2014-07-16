@@ -9,6 +9,7 @@
 #
 # set :output, "/path/to/my/cron_log.log"
 #
+<<<<<<< HEAD
 every 1.minute do 
 rake "db:seed"
 end
@@ -17,6 +18,14 @@ every 1.minute do
 	rake "sms"
 end
 
+=======
+# every 1.minute do 
+# rake "db:seed"
+# end
+# every 1.minute do 
+# rake "sms"
+# end
+>>>>>>> ac10c6742c7f3215ec7ee2b401b8b248f1309be1
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
