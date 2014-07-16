@@ -9,6 +9,4 @@ class PagesController < ApplicationController
   def recipients
   end
 
-  def legal
-  end
 end
