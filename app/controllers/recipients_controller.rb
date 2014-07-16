@@ -10,6 +10,10 @@ class RecipientsController < ApplicationController
   # GET /recipients/1
   # GET /recipients/1.json
   def show
+     @recipient = current_user.recipient
+  if ! @recipient
+    redirect_to new_user_ recipient_path(current_user)
+  end
   end
 
   # GET /recipients/new
@@ -20,6 +24,7 @@ class RecipientsController < ApplicationController
   # GET /recipients/1/edit
   def edit
   end
+
 
   # POST /recipients
   # POST /recipients.json
