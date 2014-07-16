@@ -4,6 +4,7 @@ gem 'rails_12factor', group: :production
 gem 'rails', '4.1.0'
 
 gem 'better_errors'
+gem "devise"
 gem 'binding_of_caller'
 gem "twilio-ruby"
 gem 'sass-rails', '~> 4.0.3'
