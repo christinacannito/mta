@@ -5,6 +5,7 @@ class RecipientsController < ApplicationController
   # GET /recipients.json
   def index
     @recipients = Recipient.all
+    @user = User.find(params[:user_id])
   end
 
   # GET /recipients/1
