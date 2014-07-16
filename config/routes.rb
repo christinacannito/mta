@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :recipients
+  
+  
 
   
   resources :contacts
@@ -9,6 +10,12 @@ Rails.application.routes.draw do
   # devise_for :views
   # devise_for :installs
   devise_for :users
+
+resources :users do
+   resources :recipients
+end
+  
+  
 
   # devise_for :users, :controllers => {:sessions => 'devise/sessions', :registrations => 'devise/registrations',
   #                                     :passwords => 'devise/passwords'}, :skip => [:sessions] do
