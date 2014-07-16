@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # devise_for :views
   # devise_for :installs
-  devise_for :users
+  devise_for :users, :path => 'legal'
 
 resources :users do
    resources :recipients
