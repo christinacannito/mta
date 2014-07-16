@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
   get "setting" => "pages#setting"
+
+  #get "/appointmentreminder/makecall" => "twilio#makecall"
   
    
 
