@@ -14,21 +14,15 @@
 ActiveRecord::Schema.define(version: 20140717200248) do
 
   create_table "alerts", force: true do |t|
-    t.datetime "start"
-    t.datetime "end"
-    t.integer  "user_id"
-    t.integer  "line_id"
-    t.integer  "recipient_id"
-    t.text     "sms"
-    t.text     "email"
+    t.string   "train_line"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.boolean  "sms"
+    t.boolean  "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "last_sent"
   end
-
-  add_index "alerts", ["line_id"], name: "index_alerts_on_line_id"
-  add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
-  add_index "alerts", ["user_id"], name: "index_alerts_on_user_id"
 
   create_table "lines", force: true do |t|
     t.string   "name"
