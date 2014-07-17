@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :first_names
 
   resources :contacts
+  resources :alerts
 
   # resources :user do
   #   resources :recipients
@@ -35,9 +36,8 @@ Rails.application.routes.draw do
   #   get '/logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   # end
 
-  root "pages#legal"
+  root "pages#home"
   get "about" => "pages#about"
-  get "legal" => "pages#legal"
   get "recipients" => "pages#recipients"
    
 

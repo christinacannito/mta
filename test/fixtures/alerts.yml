@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tain_line: MyString
+  start_time: 2014-07-16 13:44:39
+  end_time: 2014-07-16 13:44:39
+  sms: false
+  email: false
+
+two:
+  tain_line: MyString
+  start_time: 2014-07-16 13:44:39
+  end_time: 2014-07-16 13:44:39
+  sms: false
+  email: false
