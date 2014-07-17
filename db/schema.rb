@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140717195157) do
     t.text     "email_template"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
 # Could not dump table "services" because of following NoMethodError
