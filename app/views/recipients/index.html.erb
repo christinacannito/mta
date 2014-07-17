@@ -1,6 +1,4 @@
-<div class="hero-unit">
 <h1>Listing recipients</h1>
-</div>
 
 <table class="imagetable">
   <thead>
@@ -26,11 +24,11 @@
         <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
         <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
-<div class="hero-unit">
-<%= link_to 'New Recipient', new_user_recipient_path(current_user) %>
-</div>
+
+<%= link_to 'New Recipient', new_recipient_path %>
