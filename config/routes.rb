@@ -1,19 +1,30 @@
 Rails.application.routes.draw do
   
   
-
   
+  
+  resources :recipients
+
+  resources :first_names
+
   resources :contacts
+
+  # resources :user do
+  #   resources :recipients
+  # end
+
+  # users/recipients/
 
   #resources :pins
 
   # devise_for :views
   # devise_for :installs
-  devise_for :users, :path => 'legal'
+  devise_for :users
 
-resources :users do
-   resources :recipients
-end
+
+# resources :users do
+#    resources :recipients
+# end
   
   
 
