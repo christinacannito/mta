@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   
-  
-
-  
-  resources :contacts
-  resources :alerts
 
   #resources :pins
 
@@ -14,6 +9,8 @@ Rails.application.routes.draw do
 
 resources :users do
    resources :recipients
+   resources :alerts
+   resources :contacts
 end
   
   
@@ -28,6 +25,7 @@ end
   root "pages#home"
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
+  get "manage-alerts" =>"alerts#manage_alerts"
    
 
   # The priority is based upon order of creation: first created -> highest priority.
