@@ -1,16 +1,30 @@
 Rails.application.routes.draw do
   
+  
+  resources :recipients
+
+  resources :contacts
+  
+
+  # resources :user do
+  #   resources :recipients
+  # end
+
+  # users/recipients/
 
   #resources :pins
 
   # devise_for :views
   # devise_for :installs
   devise_for :users
+ 
 
 
-   resources :recipients
-   resources :alerts
-   resources :contacts
+
+
+# resources :users do
+#    resources :recipients
+# end
 
   
   
