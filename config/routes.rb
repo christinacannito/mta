@@ -12,10 +12,13 @@ Rails.application.routes.draw do
   resources :alerts
   # devise_for :views
   # devise_for :installs
-  # resources :users do
-  #  resources :alerts, shallow: true
-  # end
- # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
+
+  devise_for :users
+
+
+   resources :recipients
+   resources :alerts
+   resources :contacts
 
   
   
