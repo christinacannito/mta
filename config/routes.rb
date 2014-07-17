@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   # devise_for :views
   # devise_for :installs
-  devise_for :users, :path => 'legal'
+  devise_for :users
 
-resources :users do
+
    resources :recipients
    resources :alerts
    resources :contacts
-end
+
   
   
 
