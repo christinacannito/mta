@@ -17,10 +17,6 @@ Rails.application.routes.draw do
   # end
  # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
 
-
-# resources :users do
-#    resources :recipients
-# end
   
   
 
