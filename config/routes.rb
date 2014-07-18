@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
   
-  resources :recipients
+  
+  
+  resources :recipients 
 
   resources :contacts
-  
+
 
   # resources :user do
   #   resources :recipients
@@ -13,13 +15,10 @@ Rails.application.routes.draw do
   # users/recipients/
 
   #resources :pins
-
+resources :alerts
   # devise_for :views
   # devise_for :installs
   devise_for :users
- 
-
-
 
 
 # resources :users do
@@ -39,8 +38,9 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
-  get "manage-alerts" =>"alerts#manage_alerts"
-   
+
+  get "alerts" => "pages#alerts"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
