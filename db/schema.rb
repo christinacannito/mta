@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 20140717200248) do
     t.datetime "updated_at"
   end
 
+  create_table "lines", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "recipients", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -41,8 +47,16 @@ ActiveRecord::Schema.define(version: 20140717200248) do
     t.integer  "user_id"
   end
 
-# Could not dump table "services" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "services", force: true do |t|
+    t.string   "name"
+    t.string   "traffic"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "line_id"
+  end
+
+  add_index "services", ["line_id"], name: "index_services_on_line_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
