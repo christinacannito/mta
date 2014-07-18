@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   
   def recipients
   end
-
+  def alert
+  end
 end
