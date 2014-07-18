@@ -11,6 +11,9 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
    end
   
+  def go
+  end
+  
   def create
     
     @alert = Alert.new(alert_params)
@@ -18,29 +21,43 @@ class AlertsController < ApplicationController
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'alert was successfully created.' }
-      # else
-      #   format.html { render :new }
+      else
+        format.html { render :new }
       end
     end
   end
 
-  # def update
-  #   respond_to do |format|
-  #     if @alert.update(alert_params)
-  #       format.html { redirect_to @alert, notice: 'alert was successfully updated.' }
-  #     else
-  #       format.html { render :edit }
-  #     end
-  #   end
-  # end
+  def edit
+    @alert = Alert.find(params[:id])
+  end
+
+  def update
+    respond_to do |format|
+      if @alert.update(alert_params)
+        format.html { redirect_to @alert, notice: 'alert was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+  
+  def destroy
+     @alert = Alert.find(params[:id])
+    @alert.destroy
+    respond_to do |format|
+      format.html { redirect_to alerts_url, notice: 'Alert was successfully deleted.' }
+    end
+  end
+
+  
 private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_alert
-    #   @alert = alert.find(params[:id])
-    # end
+    def set_alert
+      @alert = alert.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id, :recipient_id)
+      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id)
     end
 end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   resources :recipients 
 
-  resources :contacts
+  
 
   # resources :user do
   #   resources :recipients
@@ -14,13 +14,14 @@ Rails.application.routes.draw do
   # users/recipients/
 
   #resources :pins
-resources :alerts
+  resources :alerts
   # devise_for :views
   # devise_for :installs
   devise_for :users
   # resources :users do
   #  resources :alerts, shallow: true
   # end
+ # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
 
 
 # resources :users do
@@ -36,11 +37,13 @@ resources :alerts
   #   get '/logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   # end
 
+
   root "pages#home"
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
-  get "alerts" => "pages#alerts"
-   
+  get "alerts" => "recipients#alerts"
+  get "go" => "alerts#go", as: 'go_alert'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
