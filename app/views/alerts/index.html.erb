@@ -1,0 +1,28 @@
+<h1>Alerts</h1>
+
+<table class="imagetable">
+  <thead>
+    <tr>
+      <th><font size="5" color="black">Start time</font></th>
+      <th><font size="5" color="black">End time</font></th>
+      <th><font size="5" color="black">Text </font></th>
+      <th><font size="5" color="black">Email </font></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alerts.each do |alert| %>
+      <tr>
+        <td><b><font size="3" color="black"><%= alert.start %></font></b>
+        <td><b><font size="3" color="black"><%= alert.end %></font></b>
+        <td><b><font size="3" color="black"><%= alert.sms %></font></b>
+        <td><b><font size="3" color="black"><%= alert.email %></font></b>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Alert', new_alert_path %>
