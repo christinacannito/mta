@@ -1,8 +1,9 @@
-class TwillioWrapper
+class TwilioWrapper
 
 	def initialize
 		@client = Twilio::REST::Client.new( "AC58325f3e89c734a36183bc7794e6431f" , "2307697510eb9aa980e524130d7538de")
-		@from = "3479349187" #User.id.phone_number
+		@from = "3479349187" 
+
 	end
 
 	def client
@@ -13,9 +14,13 @@ class TwillioWrapper
 		@from
 	end
 
+	def all_train_status
+		Service.all.collect {|lines| "#{lines.traffic}/n"}
+	end
+
 	def sms
 		#Fix pseudocode in interpolation
-		@sms=client.account.messages.create(:from => @from, :to => "3476319490", :body => "#{Service.name.status}")
+		@sms = @client.account.messages.create(:from => @from, :to => current_user.phone_number, :body => "Smart Alarm reminder from Yaritza at #{current_user.id.phone_number}:/n Current train statuses: #{all_train_status}")
 		@sms.sid
 	end
 	
@@ -26,3 +31,6 @@ class TwillioWrapper
 	end
 
 end
+
+@communication = TwilioWrapper.new
+@comunnication.sms
