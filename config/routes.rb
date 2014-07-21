@@ -2,12 +2,6 @@ Rails.application.routes.draw do
 
   resources :recipients 
 
-  
-
-  resources :alerts
-
-  devise_for :users
-
   #resources :pins
   resources :alerts
   # devise_for :views
@@ -15,10 +9,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-
-   resources :recipients
-   resources :alerts
-   resources :contacts
+  resources :contacts
 
   
   

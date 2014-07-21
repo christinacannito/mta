@@ -7,16 +7,16 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
-#
-<<<<<<< HEAD
+
+set :output, "/path/to/my/cron_log.log"
+
 # every 1.minute do 
-# rake "db:seed"
+#   rake "db:seed"
 # end
+
 # every 1.minute do 
 # rake "sms"
 # end
-=======
 every 1.minute do 
 rake "db:seed"
 end
@@ -24,8 +24,6 @@ end
 every 1.minute do 
 	rake "sms"
 end
-
->>>>>>> e6418a40f965b1135ac44f80ad3e6a8ad8cc2f73
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"

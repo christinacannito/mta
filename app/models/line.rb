@@ -1,3 +1,3 @@
 class Line < ActiveRecord::Base
-	belong_to :service
+	belongs_to :service
 end
