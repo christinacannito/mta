@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20140722154717) do
 
   add_index "services", ["name"], name: "index_services_on_name"
 
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
