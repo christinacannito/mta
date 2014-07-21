@@ -3,3 +3,9 @@
 $brand-primary: #d35400;
 
 @import 'bootstrap';
+
+
+.navbar-default .navbar-nav.text-color2 li a,
+.navbar-inverse .navbar-nav.text-color2 li a{
+	color: yellow;
+}

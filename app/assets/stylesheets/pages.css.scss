@@ -2,15 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+    background-color: blue;
+}
+
+.container {
+  background-color: #85A29E
+}
+
 body {
 
-  background-image:  image-url("6.jpg");
-  background-size: cover;
-  background-repeat:repeat-y;
+  // background-image:  image-url("5.jpg");
+  // background-size: cover;
+  // background-repeat:repeat-y;
 
-  background-position:top center;
+  // background-position:top center;
 
-  background-attachment:fixed; 
+  // background-attachment:fixed; 
 }
 //table,th,td
 //{
