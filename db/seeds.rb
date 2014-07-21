@@ -2,28 +2,6 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-####For Line seeds#####
-class LineSeeds
-  
-  def names
-    names = ["123", "456","7", "ACE", "BDFM", "G", "JZ", "L", "NQR", "S", "SIR" ]
-  end
-
-end
-
-line = LineSeeds.new
-
-puts "Loading train_lines" 
-
-line.names.each do |name|
-  Line.create(name: name)    #Lines is out LineSeeds model which includes a single column, name.
-end
-
-puts "#{Line.count} line names have been added."
-
-
-#####Service seeds######
-
 class ServiceSeeds
 
   attr_accessor :doc, :status_array, :description, :delay_header, :output_hash
@@ -79,7 +57,7 @@ Service.destroy_all
 
 service.descriptive_status.each do |train_name, info|
   line = Line.find_by(name: train_name)
-  Service.create(name: train_name, traffic: info[:status], description: info[:header], more_detail: info[:details], line_id: line.id)
+  Service.create(name: train_name, traffic: info[:status], description: info[:header], more_detail: info[:details])
 end
 
 puts "Updated service information"

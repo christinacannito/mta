@@ -10,9 +10,9 @@
 
 set :output, "/path/to/my/cron_log.log"
 
-# every 1.minute do 
-#   rake "db:seed"
-# end
+every 1.minute do 
+  rake "db:seed"
+end
 
 # every 1.minute do 
 # rake "sms"
