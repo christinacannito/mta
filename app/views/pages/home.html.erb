@@ -68,18 +68,21 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li><%= link_to "home", root_path %></li><!-- will be deleted -->
-                    <li><%= link_to "about", about_path %></li><!-- Also will be delete -->
-        
-        
-        
-                    <% if user_signed_in?%>
-                        <li><%= link_to "recipients", recipients_path %></li>
-                        <li><%= link_to "Edit profile", edit_user_registration_path%></li>
-                        <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
-        
-         
-                    <%end%>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#process">Process</a>
+                    </li>
+                    <li>
+                        <a href="#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul> 
             <!-- </div> -->
             <!-- /.navbar-collapse -->
@@ -107,25 +110,26 @@
 
         <%end%>
         
-        <table class="imagetable">
-        <!-- <table style="width:300px"> -->
-          <thead>
-            <tr>
-              <th><font size="5" color="black">Train name</font></th>
-              <th><font size="5" color="black">Traffic</font></th>
-              <!-- <th colspan="3"></th> -->
-            </tr>
-          </thead>
+        <div>
+            <table class="imagetable">
+            <!-- <table style="width:300px"> -->
+              <thead>
+                <tr>
+                  <th><font size="5" color="black">Train name</font></th>
+                  <th><font size="5" color="black">Traffic</font></th>
+                  <!-- <th colspan="3"></th> -->
+                </tr>
+              </thead>
 
-          <tbody>
-            <% Service.all.each do |element|%><tr>
-            <td><b><font size="3" color="black"><%=  element.name %></font></b></td>
-            <td><b><font size="3" color="black"><%=  element.traffic %></font></b></td>  
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-
+              <tbody>
+                <% Service.all.each do |element|%><tr>
+                <td><b><font size="3" color="black"><%=  element.name %></font></b></td>
+                <td><b><font size="3" color="black"><%=  element.traffic %></font></b></td>  
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+        </div>
 
    <!--  <header style="background-image: url('assets/img/bg-header.jpg');"> -->
         <div class="intro-content">
