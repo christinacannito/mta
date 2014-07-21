@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140720185452) do
+ActiveRecord::Schema.define(version: 20140721173249) do
 
   create_table "alerts", force: true do |t|
     t.datetime "start"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140720185452) do
   end
 
   add_index "services", ["line_id"], name: "index_services_on_line_id"
+  add_index "services", ["name"], name: "index_services_on_name"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
