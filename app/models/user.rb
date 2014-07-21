@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   
   has_many :alerts
   has_many :recipients
+
+
 end
