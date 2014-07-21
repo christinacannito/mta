@@ -9,7 +9,6 @@ Rails.application.load_tasks
 task :sms do 
 client = Twilio::REST::Client.new( "AC58325f3e89c734a36183bc7794e6431f" , "2307697510eb9aa980e524130d7538de")
 
-@sms=client.account.messages.create(:from => "3479349187", :to => "3476319490", :body => "jithub")
+@sms=client.account.messages.create(:from => "3479349187", :to => "9174509368", :body => "jithub")
 @sms.sid
 end
-
