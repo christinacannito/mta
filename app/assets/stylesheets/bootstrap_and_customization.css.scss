@@ -1,11 +1,45 @@
 //
 
-$brand-primary: #d35400;
-
 @import 'bootstrap';
 
+$brand-primary: white;
 
+html body {
+	background-color: white;
+}
+
+// navbar 
 .navbar-default .navbar-nav.text-color2 li a,
 .navbar-inverse .navbar-nav.text-color2 li a{
 	color: yellow;
+}
+
+// the background container - main part of site 
+body .container {
+	background-color: white;
+	// border: blue;
+}
+
+html body section {
+	background-color: white;
+}
+
+.container .row {
+	background-color: white;
+}
+
+// this is the intro content
+.intro-content {
+	background-color: white;
+	border: red;
+}
+
+section {
+	background-color: white;
+}
+
+// where the information sections are 
+section .container {
+	background-color: white;
+	border: pink;
 }
