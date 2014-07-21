@@ -9,17 +9,26 @@ html {
 .container {
   background-color: #85A29E
 }
-
-body {
-
-  // background-image:  image-url("5.jpg");
-  // background-size: cover;
-  // background-repeat:repeat-y;
-
-  // background-position:top center;
-
-  // background-attachment:fixed; 
+.circular-image img {
+               width: 300px;
+               height: 300px;
+               -webkit-border-radius: 150px;
+               -moz-border-radius: 150px;
+               -ms-border-radius: 150px;
+               -o-border-radius: 150px;
+                border-radius: 150px;
 }
+
+// body {
+
+//   background-image:  image-url("5.jpg");
+//   background-size: cover;
+//   background-repeat:repeat-y;
+
+//   background-position:top center;
+
+//   background-attachment:fixed; 
+// }
 //table,th,td
 //{
 //border:1px solid black;

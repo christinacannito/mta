@@ -25,6 +25,9 @@ class RecipientsController < ApplicationController
 
   # GET /recipients/1/edit
   def edit
+  @recipient = Recipient.find(params[:id])
+    @recipients = current_user.recipients
+
   end
 
   # POST /recipients
