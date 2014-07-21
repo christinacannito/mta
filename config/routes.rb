@@ -2,25 +2,47 @@ Rails.application.routes.draw do
 
   resources :contacts
 
-  #resources :pins
+  
+  
+  
+  
+  resources :recipients 
 
+  
+
+  # resources :user do
+  #   resources :recipients
+  # end
+
+  # users/recipients/
+
+  #resources :pins
+  resources :alerts
   # devise_for :views
   # devise_for :installs
-  devise_for :users, :path => "accounts"
 
-resources :users do
-   resources :recipients
-end
+  devise_for :users
+  # resources :users do
+  #  resources :alerts, shallow: true
+  # end
+ # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
+
+
+# resources :users do
+#    resources :recipients
+# end
   
   
 
 
 
-  root "pages#legal"
+
+  root "pages#home"
   get "about" => "pages#about"
-  get "legal" => "pages#legal"
   get "recipients" => "pages#recipients"
-   
+  get "alerts" => "recipients#alerts"
+  get "go" => "alerts#go", as: 'go_alert'
+
 
   
 

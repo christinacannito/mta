@@ -3,10 +3,16 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 gem 'rails', '4.1.0'
 
+<<<<<<< HEAD
 gem 'better_errors'
 gem "devise"
 gem 'binding_of_caller'
 gem "twilio-ruby"
+=======
+# gem 'better_errors'
+# gem 'binding_of_caller'
+
+>>>>>>> e47c69368b9385e2fc58f9dc3407b28155477a5f
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'

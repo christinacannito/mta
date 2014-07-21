@@ -1,50 +1,30 @@
-<table class="imagetable">
-  <thead>
-    <tr>
-<% notice %>
+<p id="notice"><%= notice %></p>
 
-<th><font size="5" color="black">
+<p>
   <strong>First name:</strong>
-  
-</font></th>
+  <%= @recipient.first_name %>
+</p>
 
-
-<th><font size="5" color="black">
+<p>
   <strong>Last name:</strong>
-  
-</font></th>
+  <%= @recipient.last_name %>
+</p>
 
-<th><font size="5" color="black">
+<p>
   <strong>Phone number:</strong>
-  
-</font></th>
+  <%= @recipient.phone_number %>
+</p>
 
-<th><font size="5" color="black">
+<p>
   <strong>Email address:</strong>
-  
-</font></th>
+  <%= @recipient.email_address %>
+</p>
 
-<th><font size="5" color="black">
+<p>
   <strong>Email template:</strong>
-   
-</font></th>
-<div class="hero-unit">
+  <%= @recipient.email_template %>
+</p>
+
 <%= link_to 'Edit', edit_recipient_path(@recipient) %> |
 <%= link_to 'Back', recipients_path %>
-</div>
-</tr>
-  </thead>
-
-<tbody>
-  <td><b><font size="3" color="black"><%= @recipient.first_name %></font></b>
-    <td><b><font size="3" color="black"><%= @recipient.last_name %></font></b>
-    <td><b><font size="3" color="black"><%= @recipient.phone_number %></font></b>
-    <td><b><font size="3" color="black"><%= @recipient.email_address %></font></b>
-    <td><b><font size="3" color="black"><%= @recipient.email_template %></font></b>
- 
-    
-      
-        
- </tbody>
-</table>
 

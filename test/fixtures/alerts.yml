@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2014-07-17 14:16:30
+  end: 2014-07-17 14:16:30
+  user_id_id: 
+  line_id_id: 
+  recipient_id_id: 
+  sms: MyText
+  email: MyText
+
+two:
+  start: 2014-07-17 14:16:30
+  end: 2014-07-17 14:16:30
+  user_id_id: 
+  line_id_id: 
+  recipient_id_id: 
+  sms: MyText
+  email: MyText
