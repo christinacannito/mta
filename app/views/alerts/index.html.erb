@@ -1,4 +1,4 @@
-<h1>Alerts</h1>
+<b><font size="9" color="black">Alerts</font></b>
 
 <table class="imagetable">
   <thead>
@@ -7,7 +7,9 @@
       <th><font size="5" color="black">End time</font></th>
       <th><font size="5" color="black">Text </font></th>
       <th><font size="5" color="black">Email </font></th>
-      
+       <th><font size="5" color="black"></font></th>
+      <th><font size="5" color="black"></font></th>
+      <th><font size="5" color="black"> </font></th>
     </tr>
   </thead>
 
@@ -18,6 +20,9 @@
         <td><b><font size="3" color="black"><%= alert.end %></font></b>
         <td><b><font size="3" color="black"><%= alert.sms %></font></b>
         <td><b><font size="3" color="black"><%= alert.email %></font></b>
+        <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
+        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Send', go_alert_path %></td>
       </tr>
 
     <% end %>
@@ -25,4 +30,6 @@
 </table>
 
 <br>
-<%= link_to 'New Alert', new_alert_path %>
+<!-- <div id = "white"> -->
+<b><font size="9" color="black"><%= link_to 'New Alert', new_alert_path %></font></b>
+<!-- </div> -->

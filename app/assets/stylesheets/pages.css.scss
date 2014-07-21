@@ -2,23 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// body {
+body {
 
-//   background-image:  image-url("g9.gif");
-//   background-size: cover;
-//   background-repeat:repeat-y;
+  background-image:  image-url("6.jpg");
+  background-size: cover;
+  background-repeat:repeat-y;
 
-//   background-position:top center;
+  background-position:top center;
 
-//   background-attachment:fixed; 
-// }
+  background-attachment:fixed; 
+}
 //table,th,td
 //{
 //border:1px solid black;
 //}
-
+// #white {
+//     color:#FBF5F5;
+// }
 .hero-unit {
-  background-color: #fff200;
+  background-color: white;
   width: 36%;
   text-align: center;
 }

@@ -6,8 +6,6 @@ class PagesController < ApplicationController
   def about
   end
   
-  def recipients
-  end
-  def alert
-  end
+  
+  
 end
