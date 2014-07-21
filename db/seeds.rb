@@ -1,74 +1,63 @@
 require 'open-uri'
 require 'nokogiri'
-    @train_name_array=[]
-    @train_status_array=[]
-    # @train_headline=[]
-    # @train_details=[]
-    
+require 'pry'
+
+class ServiceSeeds
+
+  attr_accessor :doc, :status_array, :description, :delay_header, :output_hash
+
+  def initialize
+    @output_hash = Hash.new {|hash, key| hash[key] = {}} 
     @doc = Nokogiri::XML(open("http://web.mta.info/status/serviceStatus.txt"))
- 
+  end
+
   def descriptive_status
     @doc.xpath('//subway//line').each do |line|
-      
+
       train_name = line.at_css("/name").text
-      @train_name_array << train_name
+
       train_status = line.at_css("status").text
-      @train_status_array << train_status
-    #   descriptive_status = line.xpath("text")
-    #   #this is the object with both headline/details
-    #   html = Nokogiri::HTML(descriptive_status.text)
-     
-    #   if train_status == "GOOD SERVICE"
-    #     @train_headline << "Hooray! Good train service today!"
-    #     @trail_details << "Relax"
-    #   else
-    #     html.css(".plannedWorkDetailLink").each do |detail|
-    #       planned_work_detail_link = detail.children.text
-    #       @train_headline << planned_work_detail_link
-    #     end    
-    #     html.css(".TitleServiceChange").each do |detail|
-    #       descriptive_detail = detail.children.text
-    #       @train_details << descriptive_detail
-    #     end
+      @output_hash[train_name][:status] = train_status 
+      super_descriptive = line.xpath("text")
 
-    #     html.css(".TitleDelay").each do |detail|
-    #       descriptive_detail = detail.children.text
-    #       @train_details << descriptive_detail
-    #     end
+      html = Nokogiri::HTML(super_descriptive.text)
 
-    #     html.css('.TitlePlannedWork').each do |detail|
-    #       descriptive_detail = detail.children.text
-    #       @train_details << descriptive_detail
-    #     end
-   
-    #     html.css(".plannedWorkDetail").each do |detail|
-    #       planned_work_detail = detail.children.text
-    #       @train_details << planned_work_detail
-    #   end 
-    # end
+      if train_status == "GOOD SERVICE"
+        super_descriptive = "On time"
+      else  
+        html.css(".plannedWorkDetailLink").each do |detail|
+          planned_work = detail.children.text
+          @output_hash[train_name][:header] = planned_work
+        end
+
+        html.css(".plannedWorkDetail").each do |detail|
+          planned_work_detail = detail.children.text
+          @output_hash[train_name][:details] = planned_work_detail
+        end
+
+        html.css(".TitleDelay").each do |detail| # working with this 
+          title_delay = detail.children.text
+          @output_hash[train_name][:title_delay] = title_delay
+        end
+
+        html.css(".TitleServiceChange").each do |detail|
+          title_service_change = detail.children.text
+          @output_hash[train_name][:service_change] = title_service_change
+        end       
+      end 
     end 
+    @output_hash
   end
+end
 
+ service = ServiceSeeds.new
 
-  def output
-   @train_name_array.zip(@train_status_array)
-  end
+puts "deleting old Service seeds"
+Service.destroy_all
 
-puts "deleting old seeds"
-descriptive_status
-Service.delete_all
-puts "loading"
-output.each do |subway_array|
+service.descriptive_status.each do |train_name, info|
+  line = Line.find_by(name: train_name)
+  Service.create(name: train_name, traffic: info[:status], description: info[:header], more_detail: info[:details])
+end
 
-
-  Service.create(name: subway_array[0], traffic: subway_array[1])
-  end
-puts Service.count
-puts "finished loading"
-
-
-
-    
-  
- 
-  
+puts "Updated service information"

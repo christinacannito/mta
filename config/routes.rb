@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   
 
+
   # resources :user do
   #   resources :recipients
   # end
@@ -22,15 +23,12 @@ Rails.application.routes.draw do
   # devise_for :installs
 
   devise_for :users
-  # resources :users do
-  #  resources :alerts, shallow: true
-  # end
- # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
 
 
 # resources :users do
 #    resources :recipients
 # end
+
   
   
 
@@ -40,10 +38,10 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
+
   get "alerts" => "recipients#alerts"
   get "go" => "alerts#go", as: 'go_alert'
 
 
-  
 
 end

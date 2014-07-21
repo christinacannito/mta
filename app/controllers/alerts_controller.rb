@@ -1,4 +1,5 @@
 class AlertsController < ApplicationController
+
    def index
     @alerts = Alert.all
    end
@@ -61,3 +62,4 @@ private
       params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id)
     end
 end
+
