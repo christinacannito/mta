@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   resources :recipients 
 
-  resources :contacts
+  
 
 
   # resources :user do
@@ -15,10 +15,17 @@ Rails.application.routes.draw do
   # users/recipients/
 
   #resources :pins
-resources :alerts
+  resources :alerts
   # devise_for :views
   # devise_for :installs
   devise_for :users
+<<<<<<< HEAD
+=======
+  # resources :users do
+  #  resources :alerts, shallow: true
+  # end
+ # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
+>>>>>>> e47c69368b9385e2fc58f9dc3407b28155477a5f
 
 
 # resources :users do
@@ -35,11 +42,17 @@ resources :alerts
   #   get '/logout' => 'devise/sessions#destroy', :as => :destroy_user_session
   # end
 
+
   root "pages#home"
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
+<<<<<<< HEAD
 
   get "alerts" => "pages#alerts"
+=======
+  get "alerts" => "recipients#alerts"
+  get "go" => "alerts#go", as: 'go_alert'
+>>>>>>> e47c69368b9385e2fc58f9dc3407b28155477a5f
 
 
   # The priority is based upon order of creation: first created -> highest priority.
