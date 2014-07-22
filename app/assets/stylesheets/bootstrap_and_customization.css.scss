@@ -8,6 +8,12 @@ $brand-primary: white;
 
 html body {
 	background-color: white;
+	width: 100%;
+	padding-bottom: 0px;
+}
+
+#contact {
+	padding: 0px;
 }
 
 // navbar 
@@ -20,6 +26,7 @@ html body {
 body .container {
 	background-color: white;
 	// border: blue;
+	width: 100%;
 }
 
 html body section {
@@ -114,6 +121,10 @@ section .container {
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
+}
+
+.container .contact {
+	padding-bottom: 0px;
 }
 
 
