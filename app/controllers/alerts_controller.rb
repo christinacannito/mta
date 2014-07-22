@@ -10,7 +10,7 @@ class AlertsController < ApplicationController
    def show
     @alert = Alert.find(params[:id])
    end
-  
+ 
   def go
   end
   

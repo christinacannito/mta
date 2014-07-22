@@ -1,3 +1,4 @@
+
                 <ul id="sddm">
                     <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">contacts list</font></b></a>
                         <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
@@ -13,4 +14,38 @@
                         <% end %>
                         </div>
                     </li>
+                </ul>
+                <ul id="sddm">
+                    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Pick start time</font></b></a>
+                        <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <% Alert.all.each do |element|%><tr>
+                        <a href="#"><b><font size="5"><%=  element.start  %></font></b></a>
+                        <% end %>
+                        </div>
+                    </li>
+                    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Pick end time</font></b></a>
+                        <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <% Alert.all.each do |element|%><tr>
+                        <a href="#"><b><font size="5"><%=  element.end  %></font></b></a>
+                        <% end %>
+                        </div>
+                    </li>
+                </ul>
+                <ul id="sddm">
+                    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime()">Pick SMS</font></b></a>
+                        <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <% Alert.all.each do |element|%><tr>
+                        <a href="#"><b><font size="5"><%=  element.sms  %></font></b></a>
+                        <% end %>
+                        </div>
+                    </li>
+                    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">Pick email</font></b></a>
+                        <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                        <%e = nil%>
+                        <% Alert.all.each do |element|%><tr>
+                        <a href="#"><b><font size="5"><%=  e = element.email  %></font></b></a>
+                        <% end %>
+                        </div>
+                    </li>
+                    <%= e %>
                 </ul>
