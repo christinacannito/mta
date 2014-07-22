@@ -5,7 +5,6 @@ class Alert < ActiveRecord::Base
   has_many :services
 
 
-
   
 end
 
