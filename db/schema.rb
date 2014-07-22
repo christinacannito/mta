@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721173249) do
+ActiveRecord::Schema.define(version: 20140721205210) do
 
   create_table "alerts", force: true do |t|
     t.datetime "start"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140721173249) do
     t.datetime "updated_at"
     t.integer  "line_id"
     t.text     "more_detail"
+    t.text     "description"
   end
 
   add_index "services", ["line_id"], name: "index_services_on_line_id"

@@ -22,12 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass'
-<<<<<<< HEAD
-gem 'bcrypt'
-=======
 gem 'devise'
-
->>>>>>> 60ccf2ecfbbb675964209be9c9aa6fbbf0feb60e
 group :production do
   gem "pg"
 end
