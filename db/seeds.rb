@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'nokogiri'
-<<<<<<< HEAD
 require 'pry'
 
 class ServiceSeeds
@@ -87,7 +86,6 @@ end
 puts "deleting old Service seeds"
 Service.destroy_all
 service.descriptive_status.each do |train_name, info|
- 
   Service.create(name: train_name, traffic: info[:status], description: info[:header], more_detail: info[:details])
 end
 
