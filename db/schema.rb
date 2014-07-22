@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140717200248) do
+=======
+ActiveRecord::Schema.define(version: 20140711184936) do
+>>>>>>> e6418a40f965b1135ac44f80ad3e6a8ad8cc2f73
 
   create_table "alerts", force: true do |t|
     t.datetime "start"
@@ -32,6 +36,11 @@ ActiveRecord::Schema.define(version: 20140717200248) do
 
   create_table "lines", force: true do |t|
     t.string   "name"
+<<<<<<< HEAD
+=======
+    t.string   "traffic"
+    t.string   "description"
+>>>>>>> e6418a40f965b1135ac44f80ad3e6a8ad8cc2f73
     t.datetime "created_at"
     t.datetime "updated_at"
   end
