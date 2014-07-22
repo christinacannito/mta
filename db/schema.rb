@@ -11,22 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721173249) do
+ActiveRecord::Schema.define(version: 20140722144201) do
 
   create_table "alerts", force: true do |t|
     t.datetime "start"
     t.datetime "end"
     t.integer  "user_id"
-    t.integer  "line_id"
     t.integer  "recipient_id"
     t.text     "sms"
     t.text     "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "last_sent"
+    t.string   "service_name"
   end
 
-  add_index "alerts", ["line_id"], name: "index_alerts_on_line_id"
   add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
   add_index "alerts", ["user_id"], name: "index_alerts_on_user_id"
 
@@ -53,11 +52,9 @@ ActiveRecord::Schema.define(version: 20140721173249) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "line_id"
     t.text     "more_detail"
   end
 
-  add_index "services", ["line_id"], name: "index_services_on_line_id"
   add_index "services", ["name"], name: "index_services_on_name"
 
   create_table "users", force: true do |t|

@@ -6,12 +6,12 @@ class TwilioWrapper
 		@from = "6466814097" 
 	end
 
-	def all_train_status
-		Service.all.each {|lines| "#{lines.traffic}"}
+	def recipient
+
 	end
 
 	def sms
 		#Fix pseudocode in interpolation
-		client.account.messages.create(:from => from, :to => User.last.phone_number, :body => "Smart Alarm reminder from Yaritza")
+		client.account.messages.create(:from => from, :to => User.last.phone_number, :body => Time.now)
 	end
 end
