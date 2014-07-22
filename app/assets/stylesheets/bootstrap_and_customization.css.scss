@@ -110,6 +110,12 @@ section .container {
 	background-color: #EDE574;
 }
 
+.owl-item .item img {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+}
+
 
 // html body div.container div.row div.col-md-10 div.col-md-offset-1 span.quote {
 // 	background-color: teal;
