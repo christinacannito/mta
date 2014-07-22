@@ -1,6 +1,4 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 html {
     background-color: blue;
@@ -38,10 +36,39 @@ html {
 // #white {
 //     color:#FBF5F5;
 // }
+
+// body {
+
+//   background-image:  image-url("g9.gif");
+//   background-size: cover;
+//   background-repeat:repeat-y;
+
+//   background-position:top center;
+
+//   background-attachment:fixed; 
+// }
+
+body {
+  background-color: teal; 
+}
+
+>>>>>>> 02761cdbb083e3f6854dd5fd362bf13ceb57947f
 .hero-unit {
   background-color: white;
   width: 36%;
   text-align: center;
+}
+
+.edit-user {
+  background-color: #fff200;
+  text-align: center;
+  width: 36%;
+  float: left;
+}
+
+.form_email {
+  background-color: pink;
+  float: right;
 }
 
 .sign-up-form {
