@@ -1,11 +1,112 @@
 //
 
-$brand-primary: #d35400;
-
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,800);
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
 @import 'bootstrap';
 
+$brand-primary: white;
 
+html body {
+  background-color: white;
+}
+
+// navbar 
 .navbar-default .navbar-nav.text-color2 li a,
 .navbar-inverse .navbar-nav.text-color2 li a{
-	color: yellow;
+  color: #85A29E;
+}
+
+// the background container - main part of site 
+body .container {
+  background-color: white;
+  // border: blue;
+}
+
+html body section {
+  background-color: white;
+}
+
+.container .row {
+  background-color: white;
+}
+
+// this is the intro content
+.intro-content {
+  background-color: white;
+  border: red;
+}
+
+section {
+  background-color: white;
+}
+
+// where the information sections are 
+section .container {
+  background-color: white;
+  border: pink;
+}
+
+#about {
+  height: 60px;
+}
+
+.circle {
+  background-color: pink;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 5px;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+.circle p{
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.circle h4 {
+  text-align: center;
+  line-height: 60px;
+  font-family: 'Montserrat Alternates', sans-serif; 
+}
+
+.circle.green {
+  background-color: #789048;
+}
+
+.circle.red {
+  background-color: #B22148;
+}
+
+.circle.purple {
+  background-color: #663366;
+}
+
+.circle.blue {
+  background-color: #0B486B;
+}
+
+.circle.orange {
+  background-color: #BF4D28;
+}
+
+.circle.light-green {
+  background-color: #B9D48B;
+}
+
+.circle.brown {
+  background-color: #948C75;
+}
+
+.circle.grey {
+  background-color: #C5CFC6;
+}
+
+.circle.yellow {
+  background-color: #EDE574;
 }
