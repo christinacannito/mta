@@ -141,72 +141,55 @@
 
     <div class="intro-content">
         <div class="brand-name">
-            <!-- <h1>MTA</h1> -->
         </div>
-        <!-- <div class="brand-name">MTA</div> -->
-        <!-- <hr class="colored"> -->
-        <!-- <div class="brand-name-subtext">by team 1 saan</div> -->
     </div>  
    
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Alert Settings</h2>
-                    <p>Create custom alert settings.</p>
-                </div>
+    <section>
+        <% if Alert.all.empty? %>
+            <div class="push_button blue-button"><b><font size="5" color="black"><%= link_to 'Push to add Alerts', new_alert_path %></font></b>
             </div>
+        <%else%>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Alert List</h2>
+                        <p>Comments or questions we would love to hear from you! </p>
+                    </div>
+                </div>
             
             <p id="notice"><%= notice %></p>
 
- <table class="imagetable">
-          <thead>
-            <tr>
-              <th><font size="5" color="black">Start time</font></th>
-              <th><font size="5" color="black">End time</font></th>
-              <th><font size="5" color="black">Text </font></th>
-              <th><font size="5" color="black">Email </font></th>
-               <th><font size="5" color="black"></font></th>
-              <th><font size="5" color="black"></font></th>
-              <th><font size="5" color="black"> </font></th>
-            </tr>
-          </thead>
+            <table class="imagetable">
+                <thead>
+                    <tr>
+                      <th><font size="5" color="black">Start time</font></th>
+                      <th><font size="5" color="black">End time</font></th>
+                      <th><font size="5" color="black">Text </font></th>
+                      <th><font size="5" color="black">Email </font></th>
+                       <th><font size="5" color="black"></font></th>
+                      <th><font size="5" color="black"></font></th>
+                      <th><font size="5" color="black"> </font></th>
+                    </tr>
+                </thead>
 
-          <tbody>
-            <% Alert.all.each do |alert| %>
-              <tr>
-                <td><b><font size="3" color="black"><%= alert.start %></font></b>
-                <td><b><font size="3" color="black"><%= alert.end %></font></b>
-                <td><b><font size="3" color="black"><%= alert.sms %></font></b>
-                <td><b><font size="3" color="black"><%= alert.email %></font></b>
-                <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
-                <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <td><%= link_to 'Send', go_alert_path %></td>
-              </tr>
+                <tbody>
+                    <% Alert.all.each do |alert| %>
+                      <tr>
+                        <td><b><font size="3" color="black"><%= alert.start %></font></b>
+                        <td><b><font size="3" color="black"><%= alert.end %></font></b>
+                        <td><b><font size="3" color="black"><%= alert.sms %></font></b>
+                        <td><b><font size="3" color="black"><%= alert.email %></font></b>
+                        <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
+                        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        <td><%= link_to 'Send', go_alert_path %></td>
+                      </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        <!-- </div> -->
+        <% end %>
+    <!-- </section> -->
 
-            <% end %>
-          </tbody>
-        </table>
-
-        <ul id="sddm">
-            <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">contacts list</font></b></a>
-                <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                <% Recipient.all.each do |element|%><tr>
-                <a href="#"><b><font size="5"><%=  element.first_name  %></font></b></a>
-                <% end %>
-                </div>
-            </li>
-            <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime()">Service name</font></b></a>
-                <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                <% Service.all.each do |element|%><tr>
-                <a href="#"><b><font size="5"><%=  element.name  %></font></b></a>
-                <% end %>
-                </div>
-            </li>
-        </ul>
-
-        </div>
-        
         <section id="about">
             <div class="container-fluid">
                 <div class="row text-center">
