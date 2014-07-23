@@ -2,12 +2,13 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,800);
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
+@import url(http://fonts.googleapis.com/css?family=Righteous);
 @import 'bootstrap';
 
 $brand-primary: white;
 
 html body {
-	background-color: white;
+	background-color: transparent;
 	width: 100%;
 	padding-bottom: 0px;
 }
@@ -24,7 +25,7 @@ html body {
 
 // the background container - main part of site 
 body .container {
-	background-color: white;
+	background-color: transparent;
 	// border: blue;
 	width: 100%;
 }
@@ -127,9 +128,23 @@ section .container {
 	padding-bottom: 0px;
 }
 
+.alerts {
+	margin-top: 5%;
+}
 
-// html body div.container div.row div.col-md-10 div.col-md-offset-1 span.quote {
-// 	background-color: teal;
-// 	color: green;
-// }
+p .btn-primary {
+	background-color: #83AF9B;
+	border-color: #83AF9B;
+	border-radius: 10px;
+}
 
+p .btn-primary:hover{
+	background-color: #C8C8A9;
+	border-color: #C8C8A9;
+}
+
+.site-name h2 {
+	margin-top: 2%;
+	margin-left: 3%;
+	font-family: 'Righteous', cursive;
+}
