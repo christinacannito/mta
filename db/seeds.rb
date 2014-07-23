@@ -52,31 +52,8 @@ end
 
  service = ServiceSeeds.new
 
-<<<<<<< HEAD
 puts "deleting old Service seeds"
 Service.destroy_all
-=======
-  def output
-   @train_name_array.zip(@train_status_array, @train_description)
-  end
-  
- 
-puts "deleting old seeds"
-Service.delete_all
-descriptive_status
-puts "loading"
-output.each do |subway_array|
-<<<<<<< HEAD
-  Service.create(name: subway_array[0], traffic: subway_array[1], description: subway_array[2])
-  end
-=======
-
-  Service.create(name: subway_array[0], traffic: subway_array[1], description: subway_array[2])
-  end
-puts Service.count
-puts "finished loading"
->>>>>>> e6418a40f965b1135ac44f80ad3e6a8ad8cc2f73
->>>>>>> 1867dcf8bd54d2ca3e3344b52aff9592bd4b7491
 
 service.descriptive_status.each do |train_name, info|
 
