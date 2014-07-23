@@ -107,10 +107,11 @@ table.imagetable td {
 }
 
 .push_button {
-  width: 200px;
-  height: auto;
+  width: 400px;
+  height: 50px;
   background-color: #83AF9B;
   border-radius: 30px;
+  margin-left: 3%;
 }
 
 .push_button:hover {
@@ -122,6 +123,11 @@ table.imagetable td {
 }
 
 .push_button p {
+  text-align: center;
+}
+
+html body p {
+  margin: 2%;
   text-align: center;
 }
 

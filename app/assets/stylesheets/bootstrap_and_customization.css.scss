@@ -133,6 +133,7 @@ section .container {
 }
 
 p .btn-primary {
+	margin-left: 2%;
 	background-color: #83AF9B;
 	border-color: #83AF9B;
 	border-radius: 10px;
@@ -148,3 +149,48 @@ p .btn-primary:hover{
 	margin-left: 3%;
 	font-family: 'Righteous', cursive;
 }
+
+.hero-unit .edit-header {
+	margin-top: 10%;
+	margin-left: 3%;
+	font-family: 'Righteous', cursive;
+}
+
+.train-circles {
+	margin-left: 7%;
+	margin-right: 0;
+	display: inline-block;
+}
+
+.navbar-collapse ul li {
+	margin-right: 30px;
+}
+
+.text p {
+	font-family: 'Righteous', cursive;
+	font-size: 1.2em;
+}
+
+.back-button {
+	width: 150px;
+	height: 20px;
+	border-radius: 10px;
+	margin-bottom: 10%;
+	background-color: #83AF9B;
+}
+
+.back-button:hover {
+	background-color: #C8C8A9;
+}
+
+.back-button a:hover {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.edit-form form {
+	margin-left: 70%;
+	background-color: #C8C8A9;
+	border: 0px;
+}
+

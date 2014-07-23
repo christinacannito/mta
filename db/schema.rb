@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140723145613) do
 
+
   create_table "alerts", force: true do |t|
     t.datetime "start"
     t.datetime "end"
