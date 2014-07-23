@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140722154717) do
     t.datetime "start"
     t.datetime "end"
     t.integer  "user_id"
-    t.integer  "line_id_id"
     t.integer  "recipient_id"
     t.text     "sms"
     t.text     "email"
@@ -27,7 +26,6 @@ ActiveRecord::Schema.define(version: 20140722154717) do
     t.string   "service_name"
   end
 
-  add_index "alerts", ["line_id_id"], name: "index_alerts_on_line_id_id"
   add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
   add_index "alerts", ["user_id"], name: "index_alerts_on_user_id"
 
