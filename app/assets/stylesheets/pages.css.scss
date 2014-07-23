@@ -2,23 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-
-  background-image:  image-url("6.jpg");
-  background-size: cover;
-  background-repeat:repeat-y;
-
-  background-position:top center;
-
-  background-attachment:fixed; 
+.container {
+  background-color: #85A29E
 }
-//table,th,td
-//{
-//border:1px solid black;
-//}
-// #white {
-//     color:#FBF5F5;
-// }
+
+.circular-image img {
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+  border-radius: 150px;
+}
+
 .hero-unit {
   background-color: white;
   width: 36%;
@@ -55,7 +52,76 @@ table.imagetable td {
   border-color: #999999;
 }
 
+#sddm
+{ margin: 0;
+  padding: 0;
+  z-index: 30}
 
+#sddm li
+{ margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font: bold 11px arial}
 
+#sddm li a
+{ display: block;
+  margin: 0 1px 0 0;
+  padding: 4px 10px;
+  width: 140px;
+  background: #5970B2;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none}
 
+#sddm li a:hover { 
+  background: #49A3FF;
+}
+
+#sddm div { 
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background: #EAEBD8;
+  border: 1px solid #5970B2;
+}
+
+#sddm div a { 
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 30px;
+    width: auto;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #EAEBD8;
+    color: #2875DE;
+    font: 11px arial;
+}
+
+#sddm div a:hover { 
+  background: #49A3FF;
+  color: #FFF;
+}
+
+.push_button {
+  width: 200px;
+  height: auto;
+  background-color: #83AF9B;
+  border-radius: 30px;
+}
+
+.push_button:hover {
+  background-color: #C8C8A9;
+}
+
+.push_button p a {
+  background-color: transparent;
+}
+
+.push_button p {
+  text-align: center;
+}
 

@@ -4,8 +4,6 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
-
-
 task :sms do 
 client = Twilio::REST::Client.new( "AC58325f3e89c734a36183bc7794e6431f" , "2307697510eb9aa980e524130d7538de")
 end
@@ -20,5 +18,4 @@ task :text_each_alert => :environment do
 	end
 	end
 end
-
 
