@@ -150,9 +150,9 @@ p .btn-primary:hover{
 	font-family: 'Righteous', cursive;
 }
 
-.hero-unit .edit-header {
-	margin-top: 10%;
-	margin-left: 3%;
+.edit-header {
+	margin-top: 0%;
+	margin-left: 20%;
 	font-family: 'Righteous', cursive;
 }
 
@@ -175,7 +175,7 @@ p .btn-primary:hover{
 	width: 150px;
 	height: 20px;
 	border-radius: 10px;
-	margin-bottom: 10%;
+	margin-bottom: 2%;
 	background-color: #83AF9B;
 }
 
@@ -189,8 +189,11 @@ p .btn-primary:hover{
 }
 
 .edit-form form {
-	margin-left: 70%;
+	margin-left: 20%;
 	background-color: #C8C8A9;
 	border: 0px;
 }
 
+.cancel-account p {
+	margin-left: 20%;
+}
