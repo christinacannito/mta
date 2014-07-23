@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722144201) do
+ActiveRecord::Schema.define(version: 20140722154717) do
 
   create_table "alerts", force: true do |t|
     t.datetime "start"

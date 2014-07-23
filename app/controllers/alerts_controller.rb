@@ -10,6 +10,9 @@ class AlertsController < ApplicationController
 
    def show
     @alert = Alert.find(params[:id])
+    @train_name = @alert.service_name
+
+
    end
   
   def go
