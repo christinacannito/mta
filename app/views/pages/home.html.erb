@@ -59,9 +59,9 @@
             <ul class="nav navbar-nav navbar-right text-color2">
                 <li class="hidden"><a href="#page-top"></a></li>
                 <li><%= link_to "home", root_path %></li>
+                <li><a href="#about">About</a></li>
                 <% if user_signed_in?%>
                     <li><a href="#contact">Alert Settings</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#process">Process</a></li>
                     <li><%= link_to "Edit profile", edit_user_registration_path%></li>
                     <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
@@ -72,8 +72,8 @@
         <%if user_signed_in?%>
             <b><font size="9" color="black"><%= "welcome back!" %></font></b>
         <%else%>
-            <div class="hero-unit">
-                <b><font size="9" color="black">Hello, Welcome aboard </font></b>
+            <div class="site-name">
+                <h2>Smart Alarm</h2>
             </div>
             <p>
                 <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"%>
@@ -81,10 +81,6 @@
             </p>
         <% end %>
       
-    <div class="brand-name">
-        <h3>Smart Alarm</h3>
-    </div>
-
     <% Service.all.each do |train| %>
         <% if train.name == "456" %>
             <div class="circle green">
@@ -144,9 +140,10 @@
         </div>
     </div>  
    
-    <section>
+    <div class="alerts">
         <% if Alert.all.empty? %>
-            <div class="push_button blue-button"><b><font size="5" color="black"><%= link_to 'Push to add Alerts', new_alert_path %></font></b>
+            <div class="push_button blue-button">
+                <p><%= link_to 'Push to add Alerts', new_alert_path %></p>
             </div>
         <%else%>
             <div class="container">
@@ -186,9 +183,8 @@
                     <% end %>
                 </tbody>
             </table>
-        <!-- </div> -->
         <% end %>
-    <!-- </section> -->
+    </div>
 
         <section id="about">
             <div class="container-fluid">
@@ -279,14 +275,14 @@
         </div>
     </aside>
 
-    <div class="container">
+<!--     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <hr class=" colored">
                 <a href="#contact" class="btn btn-outline-light">Find out more</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <section id="process" class="services">
         <div class="container">
@@ -357,7 +353,7 @@
     </section>
     
     <!-- footer should go here -->
-    <footer class="footer" style="background-image: url('assets/img/bg-footer.jpg')">
+    <footer class="footer" style="background-image: url('assets/bk.jpg')">
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-4 contact-details">
