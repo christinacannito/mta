@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20140722154717) do
   create_table "services", force: true do |t|
     t.string   "name"
     t.string   "traffic"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "more_detail"

@@ -3,6 +3,11 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 gem 'rails', '4.1.0'
 
+
+gem 'better_errors'
+gem "devise"
+gem 'binding_of_caller'
+gem "twilio-ruby"
 # gem 'better_errors'
 # gem 'binding_of_caller'
 
@@ -17,9 +22,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass'
+<<<<<<< HEAD
+gem 'bcrypt'
+=======
 gem 'devise'
 gem 'figaro'
 
+>>>>>>> 60ccf2ecfbbb675964209be9c9aa6fbbf0feb60e
 group :production do
 gem "pg"
 end
@@ -27,7 +36,6 @@ gem 'nokogiri'
 group :development, :test do 
 gem 'sqlite3'
 end
-gem 'twilio-ruby'
 #gem 'rails_12factor'
 gem 'whenever', :require => false
 gem 'spring',        group: :development
