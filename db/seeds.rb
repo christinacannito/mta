@@ -61,18 +61,13 @@ Service.delete_all
 descriptive_status
 puts "loading"
 output.each do |subway_array|
-<<<<<<< HEAD
-  Service.create(name: subway_array[0], traffic: subway_array[1], description: subway_array[2])
-  end
-=======
+
 
   Service.create(name: subway_array[0], traffic: subway_array[1], description: subway_array[2])
   end
 puts Service.count
 puts "finished loading"
->>>>>>> e6418a40f965b1135ac44f80ad3e6a8ad8cc2f73
 
-puts "finished loading"
 
     
   
