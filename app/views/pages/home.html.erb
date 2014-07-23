@@ -80,60 +80,62 @@
                 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large"%>
             </p>
         <% end %>
-      
-    <% Service.all.each do |train| %>
-        <% if train.name == "456" %>
-            <div class="circle green">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>    
-        <% elsif train.name == "123" %>
-            <div class="circle red">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>    
-        <% elsif train.name == "7" %>
-            <div class="circle purple">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "ACE" %>
-            <div class="circle blue">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "BDFM" %>
-            <div class="circle orange">    
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "G" %>
-            <div class="circle light-green">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "JZ" %>
-            <div class="circle brown">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "L" %>
-            <div class="circle grey">
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% elsif train.name == "NQR" %>
-            <div class="circle yellow">    
-                <h4><%= train.name %></h4>
-                <p><%= train.traffic %></p>
-            </div>
-        <% else train.name == "S" %>
-            <div class="circle grey"> 
-                <h4><%= train.name %></h4> 
-                <p><%= train.traffic %></p>                      
-            </div>
+    
+    <div class="train-circles">  
+        <% Service.all.each do |train| %>
+            <% if train.name == "456" %>
+                <div class="circle green">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>    
+            <% elsif train.name == "123" %>
+                <div class="circle red">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>    
+            <% elsif train.name == "7" %>
+                <div class="circle purple">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "ACE" %>
+                <div class="circle blue">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "BDFM" %>
+                <div class="circle orange">    
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "G" %>
+                <div class="circle light-green">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "JZ" %>
+                <div class="circle brown">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "L" %>
+                <div class="circle grey">
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% elsif train.name == "NQR" %>
+                <div class="circle yellow">    
+                    <h4><%= train.name %></h4>
+                    <p><%= train.traffic %></p>
+                </div>
+            <% else train.name == "S" %>
+                <div class="circle grey"> 
+                    <h4><%= train.name %></h4> 
+                    <p><%= train.traffic %></p>                      
+                </div>
+            <% end %>
         <% end %>
-    <% end %>    
+    </div>    
 
     <div class="intro-content">
         <div class="brand-name">
@@ -235,7 +237,7 @@
                                     <li><a href="https://www.linkedin.com/pub/yoni-miller/55/597/6b2"><i class="fa fa-linkedin fa-fw"></i></a></li>
                                 </ul> -->
                             </div>
-                            <h3>Yoni<br /> Miller</h3>
+                            <h3>Yoni Miller</h3>
                         </div>
                         <div class="item">
                             <img src="assets/2.jpg" alt="">
@@ -263,13 +265,12 @@
         </div>
     </section>
   
-    <aside class="cta-quote" style="background-image: url('assets/6.jpg');">
+    <aside class="cta-quote" style="background-image: url('assets/6_v2.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <span class="quote">We work with the MTA's API to get you to where you need to go ontime.</span>
+                    <h3 class="quote">We work with the MTA's API to get you to where you need to go ontime.</h3>
                     <hr class=" colored">
-                    <a href="#contact" class="btn btn-outline-light">Let's Find It</a>
                 </div>
             </div>
         </div>
