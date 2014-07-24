@@ -30,14 +30,14 @@ class Alert < ActiveRecord::Base
 	end
 
 	def reset_last_sent
-		if Time.now -self.last > 0
-		self.update_attributes(sent_at: nil, last_alert_status: nil) 
+		if Time.now -alert.last > 0
+		alert.update_attributes(sent_at: nil, last_alert_status: nil) 
 	end
 	end
 
 	def transmogrify
-		self.assign_value_of_changed_status
-		self.update_attributes(last_sent: Time.now)
+		assign_value_of_changed_status
+		update_attributes(last_sent: Time.now)
 			
 		
 
