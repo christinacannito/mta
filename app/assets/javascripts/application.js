@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require_tree .
 //= require turbolinks
 
@@ -68,3 +67,5 @@ function mcancelclosetime()
 
 // close layer when click-out
 document.onclick = mclose; 
+
+// $('#myModal').modal('show')
