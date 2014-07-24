@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724152249) do
+ActiveRecord::Schema.define(version: 20140724185442) do
 
   create_table "alerts", force: true do |t|
-    t.datetime "start"
+    t.time     "start"
     t.datetime "end"
     t.integer  "user_id"
     t.integer  "recipient_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140724152249) do
     t.datetime "updated_at"
     t.datetime "last_sent"
     t.string   "service_name"
+    t.string   "service"
   end
 
   add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
