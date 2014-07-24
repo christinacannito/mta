@@ -5,17 +5,32 @@ require File.expand_path('../config/application', __FILE__)
 Rails.application.load_tasks
 
 
-task :sms do 
-client = Twilio::REST::Client.new( "AC58325f3e89c734a36183bc7794e6431f" , "2307697510eb9aa980e524130d7538de")
-end
 
 task :text_each_alert => :environment do
-	Alert.all.each do |alert|
-		if alert.kosher?
-	text=TwilioWrapper.new(alert.id)
-	text.sms
-	alert.update_attributes(sent_at: Time.now)
+		Alert.all.each do |alert|
 
-	end
-	end
+		#if alert.relevant_time?	
+			
+			 if (alert.last_alert_status != nil) && (alert.last_alert_status != alert.current_train_status)
+			 	text=TwilioWrapper.new(alert.id)
+				text.sms
+				alert.transmogrify
+				
+			 	
+
+
+			 elsif alert.bad_service? && alert.last_alert_status != alert.current_train_status  	
+
+				text=TwilioWrapper.new(alert.id)
+				text.sms
+			
+				alert.transmogrify
+				
+
+			end	
+		end
+	#end
 end
+
+
+
