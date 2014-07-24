@@ -1,9 +1,9 @@
 <div class="edit-form">
   
-  <div class="header">
+  <!-- <div class="header">
     <h1>New alert</h1>
   </div>  
-
+ -->
   <%= form_for(@alert) do |f| %>
     <% if @alert.errors.any? %>
       <div id="error_explanation">
@@ -19,12 +19,12 @@
 
     <div class="text">
       <p><%= f.label :start %></p>
-      <%= f.date_field :start %>
+       <%= f.time_select :start %>
     </div>
 
     <div class="text">
       <p><%= f.label :end %></p>
-      <%= f.date_field :end %>
+      <%= f.time_select :end %>
     </div>
     
     <div class="text">
@@ -40,5 +40,6 @@
     <div class="text">
       <%= f.submit %>
     </div>
-  <% end %>
+    
+    <% end %>
 </div>

@@ -48,7 +48,7 @@ class AlertsController < ApplicationController
      @alert = Alert.find(params[:id])
     @alert.destroy
     respond_to do |format|
-      format.html { redirect_to alerts_url, notice: 'Alert was successfully deleted.' }
+      format.html { redirect_to root_path, notice: 'Alert was successfully deleted.' }
     end
   end
 
