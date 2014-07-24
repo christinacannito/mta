@@ -21,7 +21,7 @@
         <td><b><font size="3" color="black"><%= alert.sms %></font></b>
         <td><b><font size="3" color="black"><%= alert.email %></font></b>
         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
-        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to 'Send', go_alert_path %></td>
       </tr>
 
@@ -31,5 +31,10 @@
 
 <br>
 <!-- <div id = "white"> -->
-<b><font size="9" color="black"><%= link_to 'New Alert', new_alert_path %></font></b>
+<div class="back-button"><font size="5"><b>
+  <%= link_to 'New Alert', new_alert_path %>
+</div></font></b>
+<div class="back-button"><font size="5"><b>
+  <%= link_to 'Back', root_path %>
+</div></font></b>
 <!-- </div> -->

@@ -145,7 +145,7 @@
     <div class="alerts" id="alerts" >
         <% if Alert.all.empty? %>
             <div class="push_button blue-button">
-                <p><%= link_to 'Push to add Alerts', new_alert_path %></p>
+                <p><%= link_to 'Add Alerts', new_alert_path %></p>
             </div>
         <%else%>
             <div class="container">
@@ -179,12 +179,15 @@
                         <td><b><font size="3" color="black"><%= alert.sms %></font></b>
                         <td><b><font size="3" color="black"><%= alert.email %></font></b>
                         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
-                        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        <td><%= link_to 'Delete', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                         <td><%= link_to 'Send', go_alert_path %></td>
                       </tr>
                     <% end %>
                 </tbody>
             </table>
+                    <div class="push_button blue-button">
+                      <p><%= link_to 'Add Alerts', new_alert_path %></p>
+                   </div>
         <% end %>
     </div>
         <%else%>
