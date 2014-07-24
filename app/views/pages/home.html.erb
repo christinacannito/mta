@@ -161,6 +161,7 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
+                      <th><h3>Service name</h3></th>
                       <th><h3>Start time</h3></th>
                       <th><h3>End time</h3></th>
                       <th><h3>Text</h3></th>
@@ -172,9 +173,11 @@
                 </thead>
 
                 <tbody>
+
                     <% Alert.all.each do |alert| %>
                       <tr>
-                        <td><%= alert.start %></td>
+                        <td><%= alert.service_name %></td>
+                        <td><%= alert.start%></td>
                         <td><%= alert.end %></td>
                         <td><%= alert.sms %></td>
                         <td><%= alert.email %></td>
@@ -195,6 +198,7 @@
             <p><%= link_to 'login to add alerts', user_session_path %></p>
         </div>
         <%end%>
+
         <section id="about">
             <div class="container-fluid">
                 <div class="row text-center">
@@ -204,7 +208,9 @@
                     </div>
                 </div>
             </div>
-        </section>    
+
+        </section>  
+               
     <div class="copy">
         <p>
             Trains can be unpredictable which can cause you to be late if you don't allow the right amount of travel time. If there is a problem with the train you will only find out once you are already at the train station and by then you might have little options for other travel arrangements. Smart Alarm will alert you if your train has delays before you leave the house. You can specify how early you would like to receive the alert to make sure you will have enough time to get to your destination on time.
