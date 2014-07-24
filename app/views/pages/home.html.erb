@@ -70,12 +70,12 @@
         </div>
     </nav>
         <%if user_signed_in?%>
-            <b><font size="9" color="black"><%= "welcome back!" %></font></b>
+            <h1><%= "welcome back!" %><h1>
         <%else%>
             <div class="site-name">
                 <h2>Smart Alarm</h2>
             </div>
-            <p>
+            <p class="login">
                 <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"%>
                 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large"%>
             </p>
@@ -202,20 +202,26 @@
                 </div>
             </div>
         </section>    
-    <p>
-        Trains can be unpredictable which can cause you to be late if you don't allow the right amount of travel time. If there is a problem with the train you will only find out once you are already at the train station and by then you might have little options for other travel arrangements. Smart Alarm will alert you if your train has delays before you leave the house. You can specify how early you would like to receive the alert to make sure you will have enough time to get to your destination on time.
-    </p>
+    <div class="copy">
+        <p>
+            Trains can be unpredictable which can cause you to be late if you don't allow the right amount of travel time. If there is a problem with the train you will only find out once you are already at the train station and by then you might have little options for other travel arrangements. Smart Alarm will alert you if your train has delays before you leave the house. You can specify how early you would like to receive the alert to make sure you will have enough time to get to your destination on time.
+        </p>
 
-    <p>  
-        What if you are already on the train when an issue occurs? If your train is under ground then you will not have any cell phone service and will be unable to email anyone that you are running late. Once you create an account with us you will have the option of creating emails to a recipient list and in case you have no cell phone service and the train is delayed we will send that email for you. 
-    </p>
-    
+        <p>  
+            What if you are already on the train when an issue occurs? If your train is under ground then you will not have any cell phone service and will be unable to email anyone that you are running late. Once you create an account with us you will have the option of creating emails to a recipient list and in case you have no cell phone service and the train is delayed we will send that email for you. 
+        </p>
+    </div>
     <section class="bg-gray">
         <div class="container text-center">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>The Developers</h2>
-                    <p>We love code! This is our first project from The Flatiron school and we are so excited to share it with. This project was created because we know that train schedules can be unpredictable due to a variety of circumstances. With this application you will now receive a text message anytime your train is delayed. If you are already on your way to go to work or meet with someone this application will be able to send them a precomposed email that you wrote...even if you don't have service! We hope you enjoy the Smart Alarm!</p>
+                    <div class="copy">
+                        <p>
+                            We love code! This is our first project from The Flatiron school and we are so excited to share it with. This project was created because we know that train schedules can be unpredictable due to a variety of circumstances. With this application you will now receive a text message anytime your train is delayed. If you are already on your way to go to work or meet with someone this application will be able to send them a precomposed email that you wrote...even if you don't have service! We hope you enjoy the Smart Alarm!
+                        </p>
+                    </div>    
+
                     <hr class="colored">
                 </div>
             </div>

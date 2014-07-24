@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,800);
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Righteous);
 @import 'bootstrap';
 
@@ -11,6 +12,14 @@ html body {
 	background-color: transparent;
 	width: 100%;
 	padding-bottom: 0px;
+}
+
+html h1 {
+	font-family: 'Righteous', cursive;
+}
+
+.bg-gray h2 {
+	font-family: 'Righteous', cursive;
 }
 
 #contact {
@@ -67,7 +76,11 @@ section .container {
   margin: 5px;
   color: white;
   font-family: 'Montserrat Alternates', sans-serif;
-	
+}
+
+.circle:hover {
+	opacity: 0.6;
+	color: black;
 }
 
 .circle p{
@@ -124,6 +137,10 @@ section .container {
 	border-radius: 100px;
 }
 
+.item h3 {
+	font-family: 'Righteous', cursive;
+}
+
 .container .contact {
 	padding-bottom: 0px;
 }
@@ -151,8 +168,9 @@ p .btn-primary:hover{
 }
 
 .edit-header {
-	margin-top: 0%;
+	margin-top: 1%;
 	margin-left: 20%;
+	margin-bottom: 1px;
 	font-family: 'Righteous', cursive;
 }
 
@@ -169,14 +187,15 @@ p .btn-primary:hover{
 .text p {
 	font-family: 'Righteous', cursive;
 	font-size: 1.2em;
+	text-align: left;
 }
 
 .back-button {
 	width: 150px;
-	height: 20px;
+	height: 25px;
 	border-radius: 10px;
-	margin-bottom: 2%;
 	background-color: #83AF9B;
+	margin-left: 20%;
 }
 
 .back-button:hover {
@@ -188,12 +207,54 @@ p .btn-primary:hover{
 	text-decoration: none;
 }
 
+html body .container {
+	margin: 0px;
+}
+
+.edit-form {
+	background-image: url(/assets/rails.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #C6E5D9;
+	padding-bottom: 2%;
+	margin: -15px;
+}
+
 .edit-form form {
 	margin-left: 20%;
-	background-color: #C8C8A9;
+	margin-bottom: 0px;
+	background-color: #FFFEE4;
 	border: 0px;
+	border-radius: 10px;
+}
+
+.cancel {
+	background-color: blue;
 }
 
 .cancel-account p {
 	margin-left: 20%;
+}
+
+form.button_to {
+	margin-top: 1px;
+}
+
+.header h1 {
+	// background-color: pink;
+	padding-top: 3%;
+}
+
+p.login {
+	width: 375px;
+}
+
+.rails-img {
+	float: right;
+	background-color: pink;
+	z-index: -10;
+}
+
+.copy p {
+	font-family: 'Open Sans', sans-serif;
 }

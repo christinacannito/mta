@@ -1,34 +1,44 @@
-<%= form_for(@alert) do |f| %>
-  <% if @alert.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@alert.errors.count, "error") %> prohibited this recipient from being saved:</h2>
+<div class="edit-form">
+  
+  <div class="header">
+    <h1>New alert</h1>
+  </div>  
 
-      <ul>
-      <% @alert.errors.full_messages.each do |message| %>
-        <li><%= alerts %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@alert) do |f| %>
+    <% if @alert.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@alert.errors.count, "error") %> prohibited this recipient from being saved:</h2>
+
+        <ul>
+        <% @alert.errors.full_messages.each do |message| %>
+          <li><%= alerts %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="text">
+      <p><%= f.label :start %></p>
+      <%= f.date_field :start %>
+    </div>
+
+    <div class="text">
+      <p><%= f.label :end %></p>
+      <%= f.date_field :end %>
+    </div>
+    
+    <div class="text">
+      <p><%= f.label :sms %></p>
+      <%= f.text_field :sms %>
+    </div>
+
+    <div class="text">
+      <p><%= f.label :email %></p>
+      <%= f.text_area :email %>
+    </div>
+
+    <div class="text">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :start %><br>
-    <%= f.date_field :start %>
-  </div>
-  <div class="field">
-    <%= f.label :end %><br>
-    <%= f.date_field :end %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :sms %><br>
-    <%= f.text_field :sms %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_area :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

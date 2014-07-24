@@ -1,5 +1,9 @@
 <div class="edit-form">
-  <h1 class="edit-header">Edit <%= resource_name.to_s.humanize %></h1>
+    
+  <div class="header">
+    <h1 class="edit-header">Edit <%= resource_name.to_s.humanize %></h1>
+  </div>
+
 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
@@ -50,8 +54,10 @@
     </div>
   <% end %>
 
+
+
 <!--   <div class="cancel-account"> -->
-    <h3 class="edit-header">Cancel my account</h3>
+    <h3 class="edit-header">Unhappy? Cancel my account</h3>
 
     <p class="cancel">
       <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>
@@ -60,7 +66,7 @@
 <!--   </div>  -->
 
   <div class="back-button">
-    <%= link_to "Back", :back %>
+    <p><%= link_to "Back", :back %></p>
   </div>  
 
 </div>
