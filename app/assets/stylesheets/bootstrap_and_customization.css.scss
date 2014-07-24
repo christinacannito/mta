@@ -4,6 +4,9 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
 @import 'bootstrap';
 
 $brand-primary: white;
@@ -37,6 +40,8 @@ body .container {
 	background-color: transparent;
 	// border: blue;
 	width: 100%;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 html body section {
@@ -86,7 +91,7 @@ section .container {
 .circle p{
   text-align: center;
   line-height: 50px;
-	font-family: 'Montserrat Alternates', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .circle h4 {
@@ -185,7 +190,7 @@ p .btn-primary:hover{
 }
 
 .text p {
-	font-family: 'Righteous', cursive;
+	font-family: 'Raleway', sans-serif;
 	font-size: 1.2em;
 	text-align: left;
 }
@@ -256,5 +261,21 @@ p.login {
 }
 
 .copy p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: none;
+}
+
+.container .table {
+	background-color: #E1E5CA;
+	border-radius: 10px;
+	width: 85%;
+	margin-left: 7.5%
+}
+
+.container .table th h3 {
+	font-family: 'Righteous', cursive;
+}
+
+#welcome-back {
+	padding-left: 4%;
 }

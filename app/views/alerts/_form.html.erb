@@ -1,9 +1,9 @@
 <div class="edit-form">
   
-  <!-- <div class="header">
+<!--   <div class="header">
     <h1>New alert</h1>
-  </div>  
- -->
+  </div>   -->
+
   <%= form_for(@alert) do |f| %>
     <% if @alert.errors.any? %>
       <div id="error_explanation">
@@ -38,8 +38,15 @@
     </div>
 
     <div class="text">
+      <p><%= f.label :service_name %></p>
+      <%= f.collection_select :service_name, Service.all, :name, :name%>
+    </div>
+
+    <div class="text">
       <%= f.submit %>
     </div>
     
     <% end %>
+
+
 </div>
