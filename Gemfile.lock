@@ -63,6 +63,7 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
+    coffee-script-source (1.7.1)
     debug_inspector (0.0.2)
     devise (3.2.4)
       bcrypt (~> 3.0)

@@ -27,11 +27,10 @@ gem "pg"
 end
 gem 'nokogiri'
 group :development, :test do 
-gem 'sqlite3'
+	gem 'sqlite3'
+	gem 'spring'
 end
-gem 'twilio-ruby'
 #gem 'rails_12factor'
 gem 'whenever', :require => false
-gem 'spring',        group: :development
 gem 'pry'
 
