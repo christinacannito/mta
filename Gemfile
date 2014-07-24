@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 gem 'rails', '4.1.0'
-gem 'better_errors'
-gem 'binding_of_caller'
+# gem 'better_errors'
+# gem 'binding_of_caller'
 gem "twilio-ruby"
 # gem 'better_errors'
 # gem 'binding_of_caller'
@@ -34,3 +34,4 @@ end
 gem 'whenever', :require => false
 gem 'pry'
 
+gem 'simple_form'
