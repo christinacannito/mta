@@ -70,7 +70,7 @@
         </div>
     </nav>
         <%if user_signed_in?%>
-            <h1><%= "welcome back!" %><h1>
+            <h1 id="welcome-back"><%= "welcome back!" %><h1>
         <%else%>
             <div class="site-name">
                 <h2>Smart Alarm</h2>
@@ -151,33 +151,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>Alert List</h2>
+                        <h1>Alert List</h1>
                         <p>Comments or questions we would love to hear from you! </p>
                     </div>
              </div>
             
             <p id="notice"><%= notice %></p>
 
-            <table class="imagetable">
+            <table class="table table-condensed">
                 <thead>
                     <tr>
-                      <th><font size="5" color="black">Start time</font></th>
-                      <th><font size="5" color="black">End time</font></th>
-                      <th><font size="5" color="black">Text </font></th>
-                      <th><font size="5" color="black">Email </font></th>
-                       <th><font size="5" color="black"></font></th>
-                      <th><font size="5" color="black"></font></th>
-                      <th><font size="5" color="black"> </font></th>
+                      <th><h3>Start time</h3></th>
+                      <th><h3>End time</h3></th>
+                      <th><h3>Text</h3></th>
+                      <th><h3>Email</h3></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <% Alert.all.each do |alert| %>
                       <tr>
-                        <td><b><font size="3" color="black"><%= alert.start %></font></b>
-                        <td><b><font size="3" color="black"><%= alert.end %></font></b>
-                        <td><b><font size="3" color="black"><%= alert.sms %></font></b>
-                        <td><b><font size="3" color="black"><%= alert.email %></font></b>
+                        <td><%= alert.start %></td>
+                        <td><%= alert.end %></td>
+                        <td><%= alert.sms %></td>
+                        <td><%= alert.email %></td>
                         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
                         <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                         <td><%= link_to 'Send', go_alert_path %></td>
