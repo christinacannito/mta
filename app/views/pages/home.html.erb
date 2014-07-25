@@ -136,6 +136,7 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
+                      <th><h3>Recipient</h3></th>
                       <th><h3>Service name</h3></th>
                       <th><h3>Start time</h3></th>
                       <th><h3>End time</h3></th>
@@ -151,6 +152,7 @@
 
                     <% Alert.all.each do |alert| %>
                       <tr>
+                        <td><%= alert.recipient_id %></td>
                         <td><%= alert.service_name %></td>
                         <td><%= alert.start%></td>
                         <td><%= alert.end %></td>
