@@ -24,8 +24,12 @@
   <strong>Email template:</strong>
   <%= @recipient.email_template %>
 </p>
-
-<%= link_to 'Edit', edit_recipient_path(@recipient) %> |
+<div class="back-button">
+<%= link_to 'Edit', edit_recipient_path(@recipient) %> 
+</div>
+<div class="back-button">
+<p><%= link_to 'New Recipient', new_recipient_path %></p>
+</div>
 <div class="back-button">
   <p><%= link_to 'Back', root_path %></p>
 </div>
