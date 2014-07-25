@@ -20,7 +20,7 @@ class AlertsController < ApplicationController
   def create
     
     @alert = Alert.new(alert_params)
-    @alert.user = current_user
+    @alert.user_id = current_user
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'alert was successfully created.' }
