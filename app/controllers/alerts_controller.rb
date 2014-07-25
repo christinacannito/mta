@@ -61,6 +61,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id)
+      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id, :service_name)
     end
 end
