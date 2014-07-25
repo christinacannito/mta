@@ -80,60 +80,35 @@
                 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large"%>
             </p>
         <% end %>
+
+    <!-- TESTING TESTING -->
+<!--     <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          ...
+        </div>
+      </div>
+    </div> -->
+    <!-- TESTING TESTING --> 
     
     <div class="train-circles">  
         <% Service.all.each do |train| %>
-            <% if train.name == "456" %>
-                <div class="circle green">
+            <div class="circle <%= line_to_color(train.name) %>" data-toggle="modal" data-target=".<%= train.name %>">
+                <h4><%= train.name %></h4>
+                <p><%= train.traffic %></p>
+            </div>
+            
+            <div class="modal fade <%= train.name %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
                     <h4><%= train.name %></h4>
                     <p><%= train.traffic %></p>
-                </div>    
-            <% elsif train.name == "123" %>
-                <div class="circle red">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>    
-            <% elsif train.name == "7" %>
-                <div class="circle purple">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
+                    <p><%= train.more_detail %></p>
                 </div>
-            <% elsif train.name == "ACE" %>
-                <div class="circle blue">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% elsif train.name == "BDFM" %>
-                <div class="circle orange">    
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% elsif train.name == "G" %>
-                <div class="circle light-green">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% elsif train.name == "JZ" %>
-                <div class="circle brown">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% elsif train.name == "L" %>
-                <div class="circle grey">
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% elsif train.name == "NQR" %>
-                <div class="circle yellow">    
-                    <h4><%= train.name %></h4>
-                    <p><%= train.traffic %></p>
-                </div>
-            <% else train.name == "S" %>
-                <div class="circle grey"> 
-                    <h4><%= train.name %></h4> 
-                    <p><%= train.traffic %></p>                      
-                </div>
-            <% end %>
+              </div>
+            </div>
         <% end %>
     </div>    
 
@@ -161,6 +136,7 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
+                      <th><h3>Service name</h3></th>
                       <th><h3>Start time</h3></th>
                       <th><h3>End time</h3></th>
                       <th><h3>Text</h3></th>
@@ -172,9 +148,11 @@
                 </thead>
 
                 <tbody>
+
                     <% Alert.all.each do |alert| %>
                       <tr>
-                        <td><%= alert.start %></td>
+                        <td><%= alert.service_name %></td>
+                        <td><%= alert.start%></td>
                         <td><%= alert.end %></td>
                         <td><%= alert.sms %></td>
                         <td><%= alert.email %></td>
@@ -195,6 +173,7 @@
             <p><%= link_to 'login to add alerts', user_session_path %></p>
         </div>
         <%end%>
+
         <section id="about">
             <div class="container-fluid">
                 <div class="row text-center">
@@ -204,7 +183,9 @@
                     </div>
                 </div>
             </div>
-        </section>    
+
+        </section>  
+               
     <div class="copy">
         <p>
             Trains can be unpredictable which can cause you to be late if you don't allow the right amount of travel time. If there is a problem with the train you will only find out once you are already at the train station and by then you might have little options for other travel arrangements. Smart Alarm will alert you if your train has delays before you leave the house. You can specify how early you would like to receive the alert to make sure you will have enough time to get to your destination on time.
@@ -302,65 +283,9 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12">
-                    <h2>Our Process</h2>
+                    <h2>We would <img src="assets/heart.png" alt="heart"> to hear from you!</h2>
                     <hr class="colored">
-                    <p>Here is an overview of how we approach each new project.</p>
-                </div>
-            </div>
-            
-            <div class="row content-row">
-                <div class="col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fa fa-clipboard"></i>
-                        </div>
-                        
-                        <div class="media-body">
-                            <h3 class="media-heading">Plan</h3>
-                            <ul>
-                                <li>Client interview</li>
-                                <li>Gather consumer data</li>
-                                <li>Create content strategy</li>
-                                <li>Analyze research</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fa fa-pencil"></i>
-                        </div>
-                        
-                        <div class="media-body">
-                            <h3 class="media-heading">Create</h3>
-                            <ul>
-                                <li>Build wireframe</li>
-                                <li>Gather client feedback</li>
-                                <li>Code development</li>
-                                <li>Marketing review</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fa fa-rocket"></i>
-                        </div>
-                        
-                        <div class="media-body">
-                            <h3 class="media-heading">Launch</h3>
-                            <ul>
-                                <li>Deploy website</li>
-                                <li>Market product launch</li>
-                                <li>Collect UX data</li>
-                                <li>Quarterly maintenence</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p><img src="" alt="email">Email us at: smartalarm@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -371,29 +296,29 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-phone"></i> Call</h4>
-                    <p>800-111-2222</p>
+<!--                     <h4><i class="fa fa-phone"></i> Call</h4>
+                    <p>800-111-2222</p> -->
                 </div>
                 <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-map-marker"></i>Visit</h4>
-                    <p>25 Chapel Street<br>Brooklyn, NY 11201</p>
+<!--                     <h4><i class="fa fa-map-marker"></i>Visit</h4>
+                    <p>25 Chapel Street<br>Brooklyn, NY 11201</p> -->
                 </div>
                 <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-envelope"></i> Email</h4>
+<!--                     <h4><i class="fa fa-envelope"></i> Email</h4>
                     <p><a href="mailto:smartalarm@gmail.com">smartalarm@gmail.com</a>
-                    </p>
+                    </p> -->
                 </div>
             </div>
             <div class="row social">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
+<!--                     <ul class="list-inline">
                         <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="row copyright">
@@ -587,6 +512,7 @@
     <!-- Core Scripts -->
     <script src="assets/js/jquery-1.10.2.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 
     <!-- Plugin Scripts -->
     <script src="assets/js/plugins/jquery.easing.min.js"></script>
