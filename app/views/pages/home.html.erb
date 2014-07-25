@@ -89,7 +89,7 @@
                 </div>
                 
                 <div class="modal fade <%= train.name %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-sm">
+                  <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <h4><%= train.name %></h4>
                         <p><%= train.traffic %></p>
@@ -160,14 +160,6 @@
             <div class="push_button blue-button">
                 <p><%= link_to 'login to add alerts', user_session_path %></p>
             </div>
-            
-            
-        <%else%>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1>Alert List</h1>
-                        <p>Comments or questions we would love to hear from you! </p>
             <%end%>
 
             <section id="about">
@@ -178,55 +170,7 @@
                             <hr class="colored">
                         </div>
                     </div>
-
                 </div>
-
-             </div>
-            
-            <p id="notice"><%= notice %></p>
-
-            <table class="table table-condensed">
-                <thead>
-                    <tr>
-                      <th><h3>Recipient</h3></th>
-                      <th><h3>Service name</h3></th>
-                      <th><h3>Start time</h3></th>
-                      <th><h3>End time</h3></th>
-                      <th><h3>Text</h3></th>
-                      <th><h3>Email</h3></th>
-                      <th></th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <% Alert.all.each do |alert| %>
-                      <tr>
-                        <td><%= alert.recipient_id %></td>
-                        <td><%= alert.service_name %></td>
-                        <td><%= alert.start%></td>
-                        <td><%= alert.end %></td>
-                        <td><%= alert.sms %></td>
-                        <td><%= alert.email %></td>
-                        <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
-                        <td><%= link_to 'Delete', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                        <td><%= link_to 'Send', go_alert_path %></td>
-                      </tr>
-                    <% end %>
-                </tbody>
-            </table>
-                    <div class="push_button blue-button">
-                      <p><%= link_to 'Add Alerts', new_alert_path %></p>
-                   </div>
-        <% end %>
-    </div>
-        <%else%>
-        <div class="push_button blue-button">
-            <p><%= link_to 'login to add alerts', user_session_path %></p>
-        </div>
-        <%end%>
 
             </section>  
                    
