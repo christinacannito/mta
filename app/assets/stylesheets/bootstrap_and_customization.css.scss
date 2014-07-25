@@ -42,6 +42,7 @@ body .container {
 	width: 100%;
 	padding-right: 0px;
 	padding-left: 0px;
+	padding-bottom: 0px;
 }
 
 html body section {
@@ -281,5 +282,17 @@ p.login {
 }
 
 
+.col-lg-12 h2 {
+	font-family: 'Righteous', cursive; 
+} 
 
+.col-lg-12 p img {
+	width: 60px; 
+	height: auto;
+}
+
+html .navbar-inverse {
+	background-color: #50434D;
+	visibility: visible;
+}
 
