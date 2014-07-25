@@ -1,3 +1,6 @@
+
+    <link rel="stylesheet" href="stylesheets/style.css" media="screen" type="text/css" />
+
 <div class="edit-form">
   
 <!--   <div class="header">
@@ -9,6 +12,7 @@
       <div id="error_explanation">
         <h2><%= pluralize(@alert.errors.count, "error") %> prohibited this recipient from being saved:</h2>
 
+
         <ul>
         <% @alert.errors.full_messages.each do |message| %>
           <li><%= alerts %></li>
@@ -18,13 +22,19 @@
     <% end %>
 
     <div class="text">
+      <p><%= f.label :first_name %></p>
+      <%= f.collection_select :recipient_id, Recipient.all, :id, :first_name%>
+
+    </div>
+
+    <div class="text">
       <p><%= f.label :start %></p>
-       <%= f.time_select :start %>
+       <%= f.time_select(:start , { :size => "3"})%>
     </div>
 
     <div class="text">
       <p><%= f.label :end %></p>
-      <%= f.time_select :end %>
+     <%= f.time_select :end %>
     </div>
     
     <div class="text">
@@ -41,6 +51,9 @@
       <p><%= f.label :service_name %></p>
       <%= f.collection_select :service_name, Service.all, :name, :name%>
     </div>
+    </li>
+</ul> 
+
 
     <div class="text">
       <%= f.submit %>
@@ -49,4 +62,7 @@
     <% end %>
 
 
-</div>
+
+
+
+    
