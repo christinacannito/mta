@@ -218,20 +218,38 @@ html body .container {
 }
 
 .edit-form {
-	background-image: url(/assets/rails.png);
-	background-repeat: no-repeat;
-	background-position: right;
-	background-color: #C6E5D9;
+	background-image: url(/assets/train_tracks_orange.png);
 	padding-bottom: 2%;
 	margin: -15px;
+	background-repeat: no-repeat;
 }
+
+#sign-up .sign {
+	background-image: url(/assets/train_tracks_teal.png);
+	padding-bottom: 2%;
+	margin: -15px;
+	background-repeat: no-repeat;
+}
+
+#up .up {
+	background-image: url(/assets/train_tracks_purple.png);
+	padding-bottom: 2%;
+	margin: -15px;
+	background-repeat: no-repeat;
+}
+
 
 .edit-form form {
 	margin-left: 20%;
 	margin-bottom: 0px;
-	background-color: #FFFEE4;
+	background-color: white;
 	border: 0px;
-	border-radius: 10px;
+	// height: 600px; 
+	// width: 700px;
+}
+
+.edit-form .header {
+	background-color: white;
 }
 
 .cancel {
