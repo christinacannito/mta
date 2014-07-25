@@ -23,9 +23,9 @@ class TwilioWrapper
 		client.account.messages.create(:from => from, :to => recipient_number, :body => train_status)
 	end
 
-	# def call
-	# 	client.account.calls.create(:from => from, :to => recipient_number, :body => 	train_status)
-	# end
+	def call
+		client.account.calls.create(:from => from, :to => recipient_number, :url => build_url_for_phone_call)
+	end
 	
 
 
