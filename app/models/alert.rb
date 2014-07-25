@@ -41,7 +41,8 @@ class Alert < ActiveRecord::Base
 	end
 ###Relates to creating text to voice calls.
 	def obtain_description
-		Service.find_by(self.service_name).description
+		#it's only pulling traffic train status for now, but we will get it to pull out the description instead.
+		Service.find_by(name: self.service_name).traffic
 	end
 
 	def add_more_details

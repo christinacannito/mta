@@ -15,7 +15,7 @@ task :text_each_alert => :environment do
 			 if alert.changed_service?
 			 	text=TwilioWrapper.new(alert.id)
 
-			 	#figure out the whole some_sms_attribute stuff value
+			 	#Text or call
 				text.sms if Alert.sms == "sms" 
 				text.call if Alert.sms == "call"
 				
@@ -27,7 +27,7 @@ task :text_each_alert => :environment do
 			 elsif alert.new_bad_service?
 
 				text=TwilioWrapper.new(alert.id)
-				#figure out the whole some_sms_attribute stuff value
+				#Text or call
 				text.sms if Alert.sms == "sms" 
 				text.call if Alert.sms == "call"
 			
