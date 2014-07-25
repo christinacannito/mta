@@ -20,7 +20,7 @@ class AlertsController < ApplicationController
   def create
     
     @alert = Alert.new(alert_params)
-    @alert.user = current_user
+    @alert.user_id = current_user
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'alert was successfully created.' }
@@ -61,6 +61,6 @@ private
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id, :service_name)
+      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id, :service_name, :recipient_id)
     end
 end
