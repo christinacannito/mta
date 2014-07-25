@@ -9,9 +9,9 @@ Rails.application.load_tasks
 task :text_each_alert => :environment do
 		Alert.all.each do |alert|
 
-		#if alert.relevant_time?	
+		# if alert.relevant_time?	
 			
-			 if (alert.last_alert_status != nil) && (alert.last_alert_status != alert.current_train_status)
+			 if alert.changed_service?
 			 	text=TwilioWrapper.new(alert.id)
 				text.sms
 				alert.transmogrify
@@ -19,7 +19,7 @@ task :text_each_alert => :environment do
 			 	
 
 
-			 elsif alert.bad_service? && alert.last_alert_status != alert.current_train_status  	
+			 elsif alert.new_bad_service?
 
 				text=TwilioWrapper.new(alert.id)
 				text.sms

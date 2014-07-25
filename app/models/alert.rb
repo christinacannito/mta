@@ -3,12 +3,21 @@ class Alert < ActiveRecord::Base
   has_many :services
   	#make variable/method Service.find_by(name: self.service_name).traffic
 
+
 	def bad_service?
-		Service.find_by(name: self.service_name).traffic =! "GOOD SERVICE"
+		Service.find_by(name: self.service_name).traffic != "GOOD SERVICE"
 	end
 
-	def self.current_train_status
+	def current_train_status
 		Service.find_by(name: self.service_name).traffic
+	end
+
+	def changed_service?
+		(self.last_alert_status != nil) && (self.last_alert_status != self.current_train_status)
+	end
+
+	def new_bad_service?
+		self.bad_service? && self.last_alert_status != self.current_train_status
 	end
 
 	#checks if alert object is selected within critical timeframe of recipient
@@ -17,12 +26,13 @@ class Alert < ActiveRecord::Base
 	end
 
 	def assign_value_of_changed_status
-		self.update_attribute(last_alert_status: Service.find_by(name: self.service_name).traffic)
+		self.update_attributes(last_alert_status: Service.find_by(name: self.service_name).traffic)
 	end
 
 	def reset_last_sent
 		if Time.now -self.last > 0
 		self.update_attributes(sent_at: nil, last_alert_status: nil) 
+	end
 	end
 
 	def transmogrify

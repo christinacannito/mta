@@ -1,9 +1,10 @@
 class TwilioWrapper
-	attr_accessor :client, :from
+	attr_reader :client, :from, :alert_id
 	
-	def initialize
+	def initialize(alert_id)
 		@client = Twilio::REST::Client.new(ENV["SID"], ENV["AUTH"])
 		@from =  ENV["MY_APP_TEL"]
+		@alert_id=alert_id
 	end
 
 
@@ -15,7 +16,7 @@ class TwilioWrapper
 	def train_status
 		name=Service.find_by(name: Alert.find_by(@alert_id).service_name).name
 		traffic=Service.find_by(name: Alert.find_by(@alert_id).service_name).traffic
-		"Status for #{name} is #{traffic}"
+		"#{traffic} for #{name} as of #{Time.now}."
 	end
 
 	def sms
