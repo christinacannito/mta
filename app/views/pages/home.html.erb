@@ -104,12 +104,13 @@
             <div class="brand-name">
             </div>
         </div>  
+
        <%if user_signed_in?%>
         <div class="alerts" id="alerts" >
             <% if Alert.all.empty? %>
                 <div class="push_button blue-button">
                     <p><%= link_to 'Add Alerts', new_alert_path %></p>
-                </div>
+                </div>  
             <%else%>
                 <div class="container">
                     <div class="row">
@@ -124,6 +125,7 @@
                 <table class="table table-condensed">
                     <thead>
                         <tr>
+                          <th><h3>Name</h3></th>
                           <th><h3>Service name</h3></th>
                           <th><h3>Start time</h3></th>
                           <th><h3>End time</h3></th>
@@ -139,6 +141,7 @@
 
                         <% Alert.all.each do |alert| %>
                           <tr>
+                            <td><%= alert.recipient.first_name %></td>
                             <td><%= alert.service_name %></td>
                             <td><%= alert.start%></td>
                             <td><%= alert.end %></td>
