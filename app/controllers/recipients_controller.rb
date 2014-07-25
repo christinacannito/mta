@@ -14,6 +14,7 @@ class RecipientsController < ApplicationController
   # GET /recipients/1
   # GET /recipients/1.json
   def show
+    # @recipient = Recipient.find(params[:id])
     # @alert = Alert.find(params[:id])
     #redirect_to(:controller => 'alerts_controller', :action => 'index') 
   end

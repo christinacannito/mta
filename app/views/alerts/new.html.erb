@@ -4,18 +4,20 @@
 </div>	 -->
 
 <%= render 'form' %>
-<ul id="sddm">
-    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime()">Service name</font></b></a>
-        <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-        <% Service.all.each do |element|%><tr>
-        <a href="#"><b><font size="5"><%=  element.name  %></font></b></a>
-        <% end %>
-        </div>
-    </li>
-</ul> 
+
 
 <div class="back-button">
 	<p><%= link_to 'Back', root_path %></p>
 </div>
 
 
+</div>
+<ul id="sddm">
+    <li><b><font size="5" color="black"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">Service name</font></b></a>
+        <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <% Service.all.each do |element|%><tr>
+        <a href="#"><b><font size="5"><%=  element.name  %></font></b></a>
+        <% end %>
+        </div>
+    </li>
+</ul> 
