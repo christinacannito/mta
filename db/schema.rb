@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20140724181702) do
+ActiveRecord::Schema.define(version: 20140724200736) do
 
   create_table "alerts", force: true do |t|
     t.time     "start"
@@ -26,7 +25,6 @@ ActiveRecord::Schema.define(version: 20140724181702) do
     t.datetime "last_sent"
     t.string   "service_name"
     t.string   "last_alert_status"
-    t.string   "service"
   end
 
   add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
