@@ -35,6 +35,7 @@ class AlertsController < ApplicationController
   end
 
   def update
+    @alert = Alert.find(params[:id])
     respond_to do |format|
       if @alert.update(alert_params)
         format.html { redirect_to @alert, notice: 'alert was successfully updated.' }
