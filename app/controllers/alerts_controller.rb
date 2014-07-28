@@ -1,4 +1,6 @@
 class AlertsController < ApplicationController
+   #before_action :set_alert, only: [:update]
+
    def index
     @alerts = Alert.all
    end
@@ -34,12 +36,15 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
   end
 
-  def update
+   def update
+    @alert = Alert.find(params[:id])
     respond_to do |format|
       if @alert.update(alert_params)
         format.html { redirect_to @alert, notice: 'alert was successfully updated.' }
+        format.json { render :show, status: :ok, location: @alert }
       else
         format.html { render :edit }
+        format.json { render json: @alert.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +61,8 @@ class AlertsController < ApplicationController
 private
     # Use callbacks to share common setup or constraints between actions.
     def set_alert
-      @alert = alert.find(params[:id])
+     # @alert = Alert.find(params[:id])
+     @alert = alert.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
