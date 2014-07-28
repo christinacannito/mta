@@ -1,9 +1,5 @@
 
 
-html {
-    background-color: blue;
-}
-
 .container {
   background-color: #85A29E
 }
@@ -17,6 +13,7 @@ html {
                 border-radius: 150px;
 }
 
+<<<<<<< HEAD
 
 
 // body {
@@ -42,6 +39,18 @@ body {
 }
 
 
+=======
+.circular-image img {
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+  border-radius: 150px;
+}
+
+>>>>>>> demo
 .hero-unit {
   background-color: white;
   width: 36%;
@@ -90,7 +99,56 @@ table.imagetable td {
   border-color: #999999;
 }
 
+#sddm
+{ margin: 0;
+  padding: 0;
+  z-index: 30}
 
+#sddm li
+{ margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font: bold 11px arial}
+
+#sddm li a
+{ display: block;
+  margin: 0 1px 0 0;
+  padding: 4px 10px;
+  width: 140px;
+  background: #5970B2;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none}
+
+#sddm li a:hover { 
+  background: #49A3FF;
+}
+
+#sddm div { 
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background: #EAEBD8;
+  border: 1px solid #5970B2;
+}
+
+#sddm div a { 
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 30px;
+    width: auto;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #EAEBD8;
+    color: #2875DE;
+    font: 11px arial;
+}
+
+<<<<<<< HEAD
 #sddm
 { margin: 0;
   padding: 0;
@@ -220,6 +278,37 @@ body {
 //   background-image:-o-linear-gradient(top, #D25068, #F66C7B);
 //   background-image:linear-gradient(top, #D25068, #F66C7B);
 // }
+=======
+#sddm div a:hover { 
+  background: #49A3FF;
+  color: #FFF;
+}
+
+.push_button {
+  width: 400px;
+  height: 50px;
+  background-color: #83AF9B;
+  border-radius: 30px;
+  margin-left: 8%;
+}
+
+.push_button:hover {
+  background-color: #C8C8A9;
+}
+
+.push_button p a {
+  background-color: transparent;
+}
+
+.push_button p {
+  text-align: center;
+}
+
+html body p {
+  margin: 2%;
+  text-align: center;
+}
+>>>>>>> demo
 
 .blue-button {
   text-shadow:-1px -1px 0 #2C7982;

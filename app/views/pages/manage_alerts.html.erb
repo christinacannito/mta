@@ -1,0 +1,22 @@
+<h4>My alert preferences<h4>
+
+<%= form_for @alert do |f| %>
+	  <%= f.label :train_line %>:
+	  <%= f.text_field :train_line %><br />
+
+	  <%= f.label :start_time %>:
+	  <%= f.text_field :start_time %><br />
+
+	  <%= f.label :end_time %>:
+	  <%= f.text_field :end_time %><br />
+
+	  #Adding check boxes for alert SMS and email options.
+	  <%= check_box_tag(:sms) %>
+	  <%= label_tag(:sms, "Text me") %>
+	  <%= check_box_tag(:email) %>
+	  <%= label_tag(:email, "Email me") %>
+
+  	<%= f.submit %>
+<% end %>
+
+

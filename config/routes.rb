@@ -2,25 +2,15 @@ Rails.application.routes.draw do
 
   resources :recipients 
 
-  
-
-  resources :alerts
-
-  devise_for :users
-
   #resources :pins
   resources :alerts
   # devise_for :views
   # devise_for :installs
-  # resources :users do
-  #  resources :alerts, shallow: true
-  # end
- # match 'alerts/:id' => 'alerts#destroy', :via => :delete, :as => :admin_destroy_alert
 
+  devise_for :users
 
-# resources :users do
-#    resources :recipients
-# end
+  resources :contacts
+
   
   
 
@@ -37,7 +27,11 @@ Rails.application.routes.draw do
   get "recipients" => "pages#recipients"
   get "alerts" => "recipients#alerts"
   get "go" => "alerts#go", as: 'go_alert'
+  get "setting" => "pages#setting"
 
+  #get "/appointmentreminder/makecall" => "twilio#makecall"
+  
+   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

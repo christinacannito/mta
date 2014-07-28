@@ -1,6 +1,17 @@
-<h1>Editing recipient</h1>
+<div class="edit-form">
+	
+	<div class="header">
+		<h1 class="edit-header">Editing recipient</h1>
+	</div>	
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Show', @recipient %> |
-<%= link_to 'Back', recipients_path %>
+	<div class="back-button">
+	  <p><%= link_to 'Back', root_path %></p>
+	</div>
+
+	<div class="back-button">
+	  <p><%= link_to 'Show', @recipient  %></p>
+	</div>
+</div>	
+

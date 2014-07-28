@@ -1,17 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Recipient:</strong>
+  <%= @alert.recipient_id%>
+</p>
+
+<p>
   <strong>start time:</strong>
-  <%= @alert.start %>
+  <%= @alert.start.strftime('%r') %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @alert.end %>
+  <%= @alert.start.strftime('%r') %>
 </p>
 
 <p>
   <strong>Last sent:</strong>
   <%= @alert.last_sent %>
 </p>
+<p>
+  <strong>Service name:</strong>
+  <%= @alert.service_name %>
+</p>
+<div class="back-button">
+  <p><%= link_to 'Back', root_path %></p>
+</div>
 

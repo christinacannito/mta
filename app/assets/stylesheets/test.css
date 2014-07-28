@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* TextboxList sample CSS */
+=======
+>>>>>>> demo
 ul.holder { margin: 0; border: 1px solid #999; overflow: hidden; height: auto !important; height: 1%; padding: 4px 5px 0; }
 *:first-child+html ul.holder { padding-bottom: 2px; } * html ul.holder { padding-bottom: 2px; } /* ie7 and below */
 ul.holder li { float: left; list-style-type: none; margin: 0 5px 4px 0; }

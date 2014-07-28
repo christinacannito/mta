@@ -1,4 +1,6 @@
 class AlertsController < ApplicationController
+   #before_action :set_alert, only: [:update]
+
    def index
     @alerts = Alert.all
    end
@@ -9,6 +11,9 @@ class AlertsController < ApplicationController
 
    def show
     @alert = Alert.find(params[:id])
+    @train_name = @alert.service_name
+
+
    end
  
   def go
@@ -17,7 +22,7 @@ class AlertsController < ApplicationController
   def create
     
     @alert = Alert.new(alert_params)
-    @alert.user = current_user
+    @alert.user_id = current_user
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'alert was successfully created.' }
@@ -31,12 +36,16 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
   end
 
+
   def update
+    @alert = Alert.find(params[:id])
     respond_to do |format|
       if @alert.update(alert_params)
         format.html { redirect_to @alert, notice: 'alert was successfully updated.' }
+        format.json { render :show, status: :ok, location: @alert }
       else
         format.html { render :edit }
+        format.json { render json: @alert.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,7 +54,7 @@ class AlertsController < ApplicationController
      @alert = Alert.find(params[:id])
     @alert.destroy
     respond_to do |format|
-      format.html { redirect_to alerts_url, notice: 'Alert was successfully deleted.' }
+      format.html { redirect_to root_path, notice: 'Alert was successfully deleted.' }
     end
   end
 
@@ -53,11 +62,12 @@ class AlertsController < ApplicationController
 private
     # Use callbacks to share common setup or constraints between actions.
     def set_alert
-      @alert = alert.find(params[:id])
+     # @alert = Alert.find(params[:id])
+     @alert = alert.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id)
+      params.require(:alert).permit(:start, :end, :last_sent, :sms, :email, :user_id, :line_id, :service_name, :recipient_id)
     end
 end

@@ -1,4 +1,3 @@
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -13,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 //= require bootstrap
+=======
+>>>>>>> demo
 //= require_tree .
 //= require turbolinks
 
@@ -66,6 +68,14 @@ function mcancelclosetime()
     closetimer = null;
   }
 }
+<<<<<<< HEAD
 
 // close layer when click-out
 document.onclick = mclose; 
+=======
+
+// close layer when click-out
+document.onclick = mclose; 
+
+// $('#myModal').modal('show')
+>>>>>>> demo

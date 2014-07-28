@@ -11,30 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717200248) do
+
+ActiveRecord::Schema.define(version: 20140724200736) do
 
   create_table "alerts", force: true do |t|
-    t.datetime "start"
+    t.time     "start"
     t.datetime "end"
     t.integer  "user_id"
-    t.integer  "line_id"
     t.integer  "recipient_id"
     t.text     "sms"
     t.text     "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "last_sent"
+    t.string   "service_name"
+    t.string   "service"
+    t.string   "last_alert_status"
   end
 
-  add_index "alerts", ["line_id"], name: "index_alerts_on_line_id"
   add_index "alerts", ["recipient_id"], name: "index_alerts_on_recipient_id"
   add_index "alerts", ["user_id"], name: "index_alerts_on_user_id"
-
-  create_table "lines", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "recipients", force: true do |t|
     t.string   "first_name"
@@ -47,8 +43,16 @@ ActiveRecord::Schema.define(version: 20140717200248) do
     t.integer  "user_id"
   end
 
-# Could not dump table "services" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "services", force: true do |t|
+    t.string   "name"
+    t.string   "traffic"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "more_detail"
+    t.text     "description"
+  end
+
+  add_index "services", ["name"], name: "index_services_on_name"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
