@@ -36,7 +36,8 @@ class AlertsController < ApplicationController
     @alert = Alert.find(params[:id])
   end
 
-   def update
+
+  def update
     @alert = Alert.find(params[:id])
     respond_to do |format|
       if @alert.update(alert_params)

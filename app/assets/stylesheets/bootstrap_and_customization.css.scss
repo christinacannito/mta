@@ -1,4 +1,3 @@
-//
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,800);
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
@@ -186,6 +185,12 @@ p .btn-primary:hover{
 	display: inline-block;
 }
 
+// working on the pop up 
+.train-circles .modal h3 {
+	text-align: center;
+	font-family: 'Righteous', cursive;	
+}
+
 .navbar-collapse ul li {
 	margin-right: 30px;
 }
@@ -238,6 +243,12 @@ html body .container {
 	background-repeat: no-repeat;
 }
 
+#recipient .recipient {
+	background-image: url(/assets/train_tracks_green.png);
+	padding-bottom: 2%;
+	margin: -15px;
+	background-repeat: no-repeat;
+}
 
 .edit-form form {
 	margin-left: 20%;
