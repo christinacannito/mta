@@ -22,5 +22,6 @@ module Pinteresting
 
     
     config.assets.initialize_on_precompile = false
+    # config.assets.paths += Dir["#{Rails.root}/vendor/assets/stylesheets*"].sort_by { |dir| -dir.size }
   end
 end
