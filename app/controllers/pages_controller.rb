@@ -5,9 +5,5 @@ class PagesController < ApplicationController
 
   def about
   end
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> demo
 end

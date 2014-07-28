@@ -1,11 +1,10 @@
 class Alert < ActiveRecord::Base
-<<<<<<< HEAD
+
   belongs_to :user
   belongs_to :line
   
   
-end
-=======
+
   belongs_to :recipient  
   has_many :services
   	#make variable/method Service.find_by(name: self.service_name).traffic
@@ -54,4 +53,4 @@ end
 	
 
 end
->>>>>>> demo
+
