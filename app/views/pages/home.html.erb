@@ -58,12 +58,15 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right text-color2">
                     <li class="hidden"><a href="#page-top"></a></li>
-                    <li><%= link_to "home", root_path %></li>
+                    <li><%= link_to "Home", root_path %></li>
                     <li><a href="#about">About</a></li>
                     <% if user_signed_in?%>
                         <li><a href="#alerts">Alert Settings</a></li>
-                        <li><a href="#process">Email Us</a></li>
                         <li><%= link_to "Edit profile", edit_user_registration_path%></li>
+
+
+                        <li><a href="#process">Contact Us</a></li>
+                        
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
                     <%end%>
                 </ul> 
