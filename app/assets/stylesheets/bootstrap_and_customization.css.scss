@@ -34,6 +34,10 @@ html h1 {
 	color: #85A29E;
 }
 
+.navbar-inverse img {
+	padding-left: 2%;
+}
+
 // the background container - main part of site 
 body .container {
 	background-color: transparent;
@@ -69,6 +73,10 @@ section .container {
 }
 
 #about {
+	height: 60px;
+}
+
+#alerts {
 	height: 60px;
 }
 
@@ -167,7 +175,7 @@ p .btn-primary:hover{
 }
 
 .site-name h2 {
-	margin-top: 2%;
+	margin-top: 8%;
 	margin-left: 3%;
 	font-family: 'Righteous', cursive;
 }
@@ -180,8 +188,9 @@ p .btn-primary:hover{
 }
 
 .train-circles {
-	margin-left: 7%;
+	margin-left: 10%;
 	margin-right: 0;
+	margin-top: 1%; 
 	display: inline-block;
 }
 
@@ -299,7 +308,7 @@ form.button_to {
 
 p.login {
 	width: 375px;
-	margin-top: 6%;
+	margin-top: 2%;
 }
 
 .rails-img {
@@ -325,6 +334,7 @@ p.login {
 }
 
 #welcome-back {
+	padding-top: 10%;
 	padding-left: 4%;
 }
 
