@@ -83,14 +83,15 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # config.paperclip_defaults = {
-  # :storage => :s3,
-  # :s3_credentials => {
-  #   :bucket => ENV['sammypinterest'],
-  #   :access_key_id => ENV['AKIAIM67LCNDQ6I5ZQ2Q'],
-  #   :secret_access_key => ENV['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']
+  #   :storage => :s3,
+  #   :s3_credentials => {
+  #     :bucket => ENV['sammypinterest'],
+  #     :access_key_id => ENV['AKIAIM67LCNDQ6I5ZQ2Q'],
+  #     :secret_access_key => ENV['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']
+  #   },
+  #   :path =&gt; ":class/:id/:basename_:style.:extension",
+  #   :url =&gt; ":s3_sg_url"
   # }
-  # :path =&gt; ":class/:id/:basename_:style.:extension",
-  #         :url =&gt; ":s3_sg_url"
 
 config.paperclip_defaults = {
 :storage => :s3,
