@@ -1,12 +1,13 @@
 /* 
-*= require_tree .
-
-*= require bootstrap/bootstrap.min
-*= require css/plugins/owl-carousel/owl.carousel
-*= require css/plugins/owl-carousel/owl.theme
-*= require css/plugins/owl-carousel/owl.transitions
-*= require css/plugins/magnific-popup
-*= require css/plugins/jquery.fs.wallpaper
-*= require css/vitality-red
-*= require_self
- 
+ *
+ *
+ *= require_tree .
+ *= require bootstrap/bootstrap.min
+ *= require css/plugins/owl-carousel/owl.carousel
+ *= require css/plugins/owl-carousel/owl.theme
+ *= require css/plugins/owl-carousel/owl.transitions
+ *= require css/plugins/magnific-popup
+ *= require css/plugins/jquery.fs.wallpaper
+ *= require css/vitality-red
+ *= require_self
+ */
