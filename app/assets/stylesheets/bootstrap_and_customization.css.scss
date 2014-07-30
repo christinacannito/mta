@@ -6,7 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
-@import 'bootstrap';
+@import 'bootstrap/bootstrap.min';
 
 $brand-primary: white;
 
@@ -299,6 +299,7 @@ form.button_to {
 
 p.login {
 	width: 375px;
+	margin-top: 6%;
 }
 
 .rails-img {
