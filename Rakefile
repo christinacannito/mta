@@ -8,12 +8,17 @@ Rails.application.load_tasks
 
 task :text_each_alert => :environment do
 		Alert.all.each do |alert|
-
-		# if alert.relevant_time?	
+	
+		# If alert.relevant_time?
+			
 			
 			 if alert.changed_service?
 			 	text=TwilioWrapper.new(alert.id)
-				text.sms
+
+			 	#Text or call
+				text.sms if Alert.sms == "sms" 
+				text.call if Alert.sms == "call"
+				
 				alert.transmogrify
 				
 			 	
@@ -22,15 +27,18 @@ task :text_each_alert => :environment do
 			 elsif alert.new_bad_service?
 
 				text=TwilioWrapper.new(alert.id)
-				text.sms
+				#Text or call
+				text.sms if Alert.sms == "sms" 
+				text.call if Alert.sms == "call"
 			
-				alert.transmogrify
-				
+				alert.transmogrify	
 
 			end	
+
 		end
 	#end
 end
+
 
 
 
