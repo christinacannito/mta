@@ -12,17 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require js/bootstrap/bootstrap.min
-//= require js/plugins/jquery.easing.min
-//= require js/plugins/classie
-//= require js/plugins/cbpAnimatedHeader
 //= require js/plugins/owl-carousel/owl.carousel.min
 //= require js/plugins/jquery.magnific-popup/jquery.magnific-popup.min
 //= require js/plugins/jquery.fs.wallpaper
+//= require js/bootstrap/bootstrap.min
+//= require js/vitality
+//= require turbolinks
+//= require js/plugins/jquery.easing.min
+//= require js/plugins/classie
+//= require js/plugins/cbpAnimatedHeader
 //= require js/contact_me
 //= require js/plugins/jqBootstrapValidation
-//= require js/vitality
+
 
 
 
