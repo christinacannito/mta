@@ -76,6 +76,10 @@ section .container {
 	height: 60px;
 }
 
+#alerts {
+	height: 60px;
+}
+
 .circle {
   background-color: pink;
   height: 200px;
@@ -186,7 +190,7 @@ p .btn-primary:hover{
 .train-circles {
 	margin-left: 10%;
 	margin-right: 0;
-	margin-top: 3%; 
+	margin-top: 1%; 
 	display: inline-block;
 }
 

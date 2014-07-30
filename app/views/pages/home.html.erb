@@ -108,10 +108,37 @@ restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
     <% end %>
 </div>
     <%else%>
-    <div class="push_button blue-button">
-        <p><%= link_to 'login to add alerts', user_session_path %></p>
-    </div>
+        
+    <section id="alerts">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h1>My alerts</h1>
+                    <hr class="colored">
+                    <div class="push_button blue-button">
+                        <p><%= link_to 'Add alerts', user_session_path %></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- <div>
+            <section id="alerts"><!-- this need styling same as about -->
+                <!-- <div class="col-lg-12">
+                    <h1>My Alerts</h1>
+                    <hr class="colored"
+                </div>
+
+                
+        
+             </section> 
+        </div> -->
     <%end%>
+
 
     <section id="about">
         <div class="container-fluid">
@@ -122,7 +149,6 @@ restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
                 </div>
             </div>
         </div>
-
     </section>  
            
 <div class="copy">
