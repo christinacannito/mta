@@ -1,28 +1,12 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree ../../../vendor/assets
- *= require_tree .
-<<<<<<< HEAD
-  
-=======
- *= require bootstrap/bootstrap.min
- *= require css/plugins/owl-carousel/owl.carousel
- *= require css/plugins/owl-carousel/owl.theme
- *= require css/plugins/owl-carousel/owl.transitions
- *= require css/plugins/magnific-popup
- *= require css/plugins/jquery.fs.wallpaper
- #= require css/vitality-red
+/* 
+*= require_tree .
 
->>>>>>> 06f3a26aae97e9bc89cec4f4b0ede8e022de28d3
- *= require_self
- */
+*= require bootstrap/bootstrap.min
+*= require css/plugins/owl-carousel/owl.carousel
+*= require css/plugins/owl-carousel/owl.theme
+*= require css/plugins/owl-carousel/owl.transitions
+*= require css/plugins/magnific-popup
+*= require css/plugins/jquery.fs.wallpaper
+*= require css/vitality-red
+*= require_self
+ 
