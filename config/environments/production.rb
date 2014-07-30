@@ -85,11 +85,19 @@ Rails.application.configure do
   # config.paperclip_defaults = {
   # :storage => :s3,
   # :s3_credentials => {
-  #   :bucket => ENV["S3_SID"],
-  #   :access_key_id => ENV["sw3_access_key_id"],
-  #   :secret_access_key => ENV["sw3_secret_access_key"]
+  #   :bucket => ENV['sammypinterest'],
+  #   :access_key_id => ENV['AKIAIM67LCNDQ6I5ZQ2Q'],
+  #   :secret_access_key => ENV['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']
   # }
-  # # :path =&gt; ":class/:id/:basename_:style.:extension",
-  # #         :url =&gt; ":s3_sg_url"
+  # :path =&gt; ":class/:id/:basename_:style.:extension",
+  #         :url =&gt; ":s3_sg_url"
 
+config.paperclip_defaults = {
+:storage => :s3,
+:s3_credentials => {
+:bucket => ENV['AWS_BUCKET'],
+:access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+}
+}
 end
