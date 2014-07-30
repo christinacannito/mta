@@ -101,7 +101,7 @@ section .container {
 }
 
 .circle.green {
-	background-color: #789048;
+	background-color: #306B09;
 }
 
 .circle.red {
@@ -121,7 +121,7 @@ section .container {
 }
 
 .circle.light-green {
-	background-color: #B9D48B;
+	background-color: #91AB01;
 }
 
 .circle.brown {
@@ -133,7 +133,7 @@ section .container {
 }
 
 .circle.yellow {
-	background-color: #EDE574;
+	background-color: #F7E059;
 }
 
 .owl-item .item img {
@@ -185,7 +185,6 @@ p .btn-primary:hover{
 	display: inline-block;
 }
 
-// working on the pop up 
 .train-circles .modal h3 {
 	text-align: center;
 	font-family: 'Righteous', cursive;	
@@ -229,11 +228,29 @@ html body .container {
 	background-repeat: no-repeat;
 }
 
+.edit-form form {
+	box-shadow: 3px 3px 15px 6px #ccc;
+}
+
 #sign-up .sign {
 	background-image: url(/assets/train_tracks_teal.png);
 	padding-bottom: 2%;
 	margin: -15px;
 	background-repeat: no-repeat;
+}
+
+
+
+.devise-forgot {
+	float: left;
+}
+
+.devise-forgot ul li {
+	list-style: none;
+}
+
+.devise-forgot ul li a:hover {
+	background-color: #a7c5bd;
 }
 
 #up .up {
