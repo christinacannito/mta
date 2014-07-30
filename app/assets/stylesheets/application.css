@@ -12,6 +12,17 @@
  *
  *= require_tree ../../vendors/assets
  *= require_tree .
+<<<<<<< HEAD
   
+=======
+ *= require bootstrap/bootstrap.min
+ *= require css/plugins/owl-carousel/owl.carousel
+ *= require css/plugins/owl-carousel/owl.theme
+ *= require css/plugins/owl-carousel/owl.transitions
+ *= require css/plugins/magnific-popup
+ *= require css/plugins/jquery.fs.wallpaper
+ #= require css/vitality-red
+
+>>>>>>> 06f3a26aae97e9bc89cec4f4b0ede8e022de28d3
  *= require_self
  */
