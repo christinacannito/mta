@@ -175,11 +175,7 @@ p .btn-primary:hover{
 }
 
 .site-name h2 {
-<<<<<<< HEAD
 	margin-top: 8%;
-=======
-	margin-top: 10%;
->>>>>>> fixing minor changes home page
 	margin-left: 3%;
 	font-family: 'Righteous', cursive;
 }
@@ -367,4 +363,30 @@ html .navbar-inverse {
 
 #footer-home {
 	background-image: url(image-path('bk.jpg'));
+}
+
+.profiles img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.profiles {
+	float: left;
+	margin-left: 5%; 
+}
+
+section a {
+	width: 100px;
+	height: 100px;
+	// background-color: blue;
+	// border-radius: 80%;
+}
+
+section a:hover {
+	background-color: transparent;
+}
+
+.fa {
+	font-size: 1em;
 }
