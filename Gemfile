@@ -23,10 +23,12 @@ gem 'devise'
 gem 'figaro'
 
 group :production do
-gem 'rails_12factor'
-gem "pg"
+	gem 'rails_12factor'
+	gem "pg"
 end
+
 gem 'nokogiri'
+
 group :development, :test do 
 	gem 'sqlite3'
 	gem 'spring'
