@@ -389,4 +389,67 @@ section a:hover {
 
 .fa {
 	font-size: 1em;
+} 
+
+.image-profile {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+	float: left;
+}
+
+.profile-info {
+	float: left;
+	margin-left: -200px;
+	margin-top: 175px;
+}
+
+#yaritza_profile {
+	width: 200px;
+	height: 300px;
+	display: inline;
+
+	// .image-profile {
+	// 	width: 175px;
+	// 	height: 175px;
+	// 	border-radius: 50%;
+	// 	float: left;
+	// }
+
+	.profile-info {
+
+	}
+}
+
+.yaritza {
+	background: url(image-path('yaritza_profile.jpg'));	
+}
+
+.yaritza:hover {
+	background: url(image-path('yaritza_profile.jpg')) 0 -180px;
+}
+
+.yoni {
+	background: url(image-path('yoni_profile.jpg'));	
+}
+
+.yoni:hover {
+	background: url(image-path('yoni_profile.jpg')) 0 -180px;
+}
+
+.christina {
+	background: url(image-path('christina_profile.jpg'));	
+}
+
+.christina:hover {
+	background: url(image-path('christina_profile.jpg')) 0 -180px;
+}
+
+.sammy {
+	// position: absolute;
+	background: url(image-path('sammy_profile.jpg'));	
+}
+
+.sammy:hover {
+	background: url(image-path('sammy_profile.jpg')) 0 -180px;
 }
