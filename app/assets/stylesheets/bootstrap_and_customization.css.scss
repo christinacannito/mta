@@ -263,14 +263,14 @@ html body .container {
 }
 
 #up .up {
-	background-image: url(/assets/train_tracks_purple.png);
+	background-image: url(image-path('train_tracks_purple.png'));
 	padding-bottom: 2%;
 	margin: -15px;
 	background-repeat: no-repeat;
 }
 
 #recipient .recipient {
-	background-image: url(/assets/train_tracks_green.png);
+	background-image: url(image-path('train_tracks_green.png'));
 	padding-bottom: 2%;
 	margin: -15px;
 	background-repeat: no-repeat;
