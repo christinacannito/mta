@@ -9,14 +9,10 @@
       <%= devise_error_messages! %>
         
       <div class="text">
-        <p><%= f.label :first_name %></p>
-        <%= f.text_field :first_name, :autofocus => true, class: "form-control"%>
+        <p><%= f.label :name %></p>
+        <%= f.text_field :name, :autofocus => true, class: "form-control", id: "name"%>
       </div>
       
-      <div class="text">
-        <p><%= f.label :last_name %></p>
-        <%= f.text_field :last_name, :autofocus => true, class: "form-control"%>
-      </div>
       
       <div class="text">
         <p><%= f.label :phone_number %></p>
