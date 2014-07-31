@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731150557) do
+ActiveRecord::Schema.define(version: 20140731224515) do
 
   create_table "alerts", force: true do |t|
     t.time     "start"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20140731150557) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["name"], name: "index_users_on_name", unique: true
+  add_index "users", ["name"], name: "index_users_on_name"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
