@@ -263,14 +263,14 @@ html body .container {
 }
 
 #up .up {
-	background-image: url(/assets/train_tracks_purple.png);
+	background-image: url(image-path('train_tracks_purple.png'));
 	padding-bottom: 2%;
 	margin: -15px;
 	background-repeat: no-repeat;
 }
 
 #recipient .recipient {
-	background-image: url(/assets/train_tracks_green.png);
+	background-image: url(image-path('train_tracks_green.png'));
 	padding-bottom: 2%;
 	margin: -15px;
 	background-repeat: no-repeat;
@@ -364,3 +364,95 @@ html .navbar-inverse {
 #footer-home {
 	background-image: url(image-path('bk.jpg'));
 }
+
+.profiles img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.profiles {
+	// float: left;
+	margin-left: 5%; 
+}
+
+section a {
+	width: 100px;
+	height: 100px;
+}
+
+section a:hover {
+	background-color: transparent;
+}
+
+.fa {
+	font-size: 30px;
+} 
+
+.image-profile {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+	float: left;
+}
+
+.profile-container{
+	width: 250px;
+	height: 300px;
+	display: inline-block;
+}
+.yaritza {
+	background: url(image-path('yaritza_profile.jpg'));	
+}
+
+.yaritza:hover {
+	background: url(image-path('yaritza_profile.jpg')) 0 -180px;
+}
+
+.yoni {
+	background: url(image-path('yoni_profile.jpg'));	
+}
+
+.yoni:hover {
+	background: url(image-path('yoni_profile.jpg')) 0 -180px;
+}
+
+.christina {
+	background: url(image-path('christina_profile.jpg'));	
+}
+
+.christina:hover {
+	background: url(image-path('christina_profile.jpg')) 0 -180px;
+}
+
+.sammy {
+	background: url(image-path('sammy_profile.jpg'));	
+}
+
+.sammy:hover {
+	background: url(image-path('sammy_profile.jpg')) 0 -180px;
+}
+
+.sammy h3 {
+	padding-top: 163px;
+}
+
+.yaritza {
+	padding-top: 163px;
+}
+
+.yoni h3 {
+	padding-top: 163px;
+}
+
+.christina h3 {
+	padding-top: 163px;
+}
+
+.text-profile {
+	float: left;
+	width: 200px;
+	height: 300px;
+}
+
+

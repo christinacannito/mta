@@ -1,4 +1,4 @@
-restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
+<nav class="text-color navbar navbar-inverse navbar-fixed-top">
 
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -8,7 +8,7 @@ restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
         <%= image_tag("smart_alarm_logo_sm.png") %>
         <ul class="nav navbar-nav navbar-right text-color2">
             <li class="hidden"><a href="#page-top"></a></li>
-            <!-- <li><%= link_to "Home", root_path %></li> -->
+            <li><%= link_to "Home", root_path %></li>
 
             <li><a href="#about">About</a></li>
             <% if user_signed_in?%>
@@ -123,20 +123,6 @@ restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
             </div>
         </div>
     </section>
-
-
-
-        <!-- <div>
-            <section id="alerts"><!-- this need styling same as about -->
-                <!-- <div class="col-lg-12">
-                    <h1>My Alerts</h1>
-                    <hr class="colored"
-                </div>
-
-                
-        
-             </section> 
-        </div> -->
     <%end%>
 
 
@@ -174,54 +160,48 @@ restat<nav class="text-color navbar navbar-inverse navbar-fixed-top">
                 <hr class="colored">
             </div>
         </div>
-        
-        <div class="row content-row">
-            <div class="col-lg-12">
-                <div class="about-carousel">
-                    <div class="item">
-                        <%= image_tag("yaritza.jpg", alt: "yaritza profile picture")%>
-                        <div>
-                            <ul class="list-inline social">
-                                <li><a href="https://twitter.com/saturn541"><i class="fa fa-twitter fa-fw"></i></a></li>
-                                <li><a href="https://www.linkedin.com/pub/yaritza-rodriguez/78/1b2/570"><i class="fa fa-linkedin fa-fw"></i></a></li>
-                            </ul>
-                        </div>
-                        <h3>Yaritza Rodriguez</h3>
-                    </div>
-                    <div class="item">
-                        <%= image_tag("yoni.jpg") %>
-                        <div>
-                            <ul class="list-inline social">
-                                <li><a href="https://twitter.com/shushugah"><i class="fa fa-twitter fa-fw"></i></a></li>
-                                <li><a href="https://www.linkedin.com/pub/yoni-miller/55/597/6b2"><i class="fa fa-linkedin fa-fw"></i></a></li>
-                            </ul>
-                        </div>
-                        <h3>Yonatan Miller</h3>
-                    </div>
-                    <div class="item">
-                        <%= image_tag("2.jpg") %>
-                        <div>
-                            <ul class="list-inline social">
-                                <li><a href="https://twitter.com/SammyKhaleel"><i class="fa fa-twitter fa-fw"></i></a></li>
-                                <li><a href="https://www.linkedin.com/profile/view?id=219364399&trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin fa-fw"></i></a></li>
-                            </ul>
-                        </div>
-                        <h3>Sammer Khaleel</h3>
-                    </div>
-                    <div class="item">
-                        <%= image_tag("christina.jpg") %>
-                        <div>
-                            <ul class="list-inline social">
-                                <li><a href="https://twitter.com/ccannitonyc"><i class="fa fa-twitter fa-fw"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/christinacannito"><i class="fa fa-linkedin fa-fw"></i></a></li>
-                            </ul>
-                        </div>
-                        <h3>Christina Cannito</h3>
-                    </div>
-                </div>
+
+        <div class="profile-container">
+            <div class="profiles image-profile sammy">
+            </div>
+            <div class="text-profile">
+                <h3 id="dont-hover">Sammer Khaleel</h3>
+                <a class="dont-hover" href="https://www.linkedin.com/profile/view?id=219364399&trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
+                <a class="dont-hover" href="https://twitter.com/SammyKhaleel"><i class="fa fa-twitter"></i></i></a>
             </div>
         </div>
-    </div>
+
+        <div class="profile-container">
+            <div class="profiles image-profile yaritza">
+            </div>
+            <div class="text-profile">
+                <h3>Yaritza Rodriguez</h3>
+                <a href="https://www.linkedin.com/pub/yaritza-rodriguez/78/1b2/570"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/saturn541"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>    
+
+        <div class="profile-container">
+            <div class="profiles image-profile yoni">
+            </div>
+            <div class="text-profile">
+                <h3>Yonatan Miller</h3>
+                <a href="https://www.linkedin.com/pub/yoni-miller/55/597/6b2"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/shushugah"><i class="fa fa-twitter"></i></i></a>
+            </div>
+        </div>    
+
+        <div class="profile-container">
+            <div class="profiles image-profile christina">
+            </div>
+            <div class="text-profile">
+                <h3>Christina Cannito</h3>
+                <a href="https://www.linkedin.com/in/christinacannito"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/ccannitonyc"><i class="fa fa-twitter"></i></i></a>
+            </div>
+        </div>    
+
+    </div>    
 </section>
 
 <aside class="cta-quote" id="cta-quote">
