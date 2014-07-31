@@ -372,15 +372,13 @@ html .navbar-inverse {
 }
 
 .profiles {
-	float: left;
+	// float: left;
 	margin-left: 5%; 
 }
 
 section a {
 	width: 100px;
 	height: 100px;
-	// background-color: blue;
-	// border-radius: 80%;
 }
 
 section a:hover {
@@ -388,7 +386,7 @@ section a:hover {
 }
 
 .fa {
-	font-size: 1em;
+	font-size: .75em;
 } 
 
 .image-profile {
@@ -398,29 +396,11 @@ section a:hover {
 	float: left;
 }
 
-.profile-info {
-	float: left;
-	margin-left: -200px;
-	margin-top: 175px;
+.profile-container{
+	width: 250px;
+	height: 500px;
+	display: inline-block;
 }
-
-#yaritza_profile {
-	width: 200px;
-	height: 300px;
-	display: inline;
-
-	// .image-profile {
-	// 	width: 175px;
-	// 	height: 175px;
-	// 	border-radius: 50%;
-	// 	float: left;
-	// }
-
-	.profile-info {
-
-	}
-}
-
 .yaritza {
 	background: url(image-path('yaritza_profile.jpg'));	
 }
@@ -446,10 +426,33 @@ section a:hover {
 }
 
 .sammy {
-	// position: absolute;
 	background: url(image-path('sammy_profile.jpg'));	
 }
 
 .sammy:hover {
 	background: url(image-path('sammy_profile.jpg')) 0 -180px;
 }
+
+.sammy h3 {
+	padding-top: 163px;
+}
+
+.yaritza {
+	padding-top: 163px;
+}
+
+.yoni h3 {
+	padding-top: 163px;
+}
+
+.christina h3 {
+	padding-top: 163px;
+}
+
+.text {
+	float: left;
+	width: 200px;
+	height: 300px;
+}
+
+
