@@ -21,7 +21,7 @@
 //= require js/plugins/jquery.easing.min
 //= require js/plugins/classie
 //= require js/plugins/cbpAnimatedHeader
-//= require js/contact_me
+
 //= require js/plugins/jqBootstrapValidation
 
 
