@@ -5,7 +5,10 @@
     </button>
             
     <div class="navbar-collapse">
-        <%= image_tag("smart_alarm_logo_sm.png") %>
+        <%= link_to root_path do %>
+            <div id="logo-background" class="logo logo-container">
+            </div>
+        <% end %>
         <ul class="nav navbar-nav navbar-right text-color2">
             <li class="hidden"><a href="#page-top"></a></li>
             <li><%= link_to "Home", root_path %></li>
@@ -21,7 +24,7 @@
     </div>
 </nav>
     <%if user_signed_in?%>
-        <h1 id="welcome-back"><%= "welcome back!" %><h1><!-- needs work -->
+        <h1 id="welcome-back"><%= "welcome back!" %><h1>
     <%else%>
         <div class="site-name">
             <h2>Smart Alarm</h2>
@@ -58,14 +61,15 @@
 <%if user_signed_in?%>
 <div class="alerts" id="alerts" >
     <% if Alert.all.empty? %>
-        <div class="push_button blue-button">
+        <div>
             <p><%= link_to 'Add Alerts', new_alert_path %></p>
         </div>
     <%else%>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1>Alert List</h1>
+                    <h1>Alerts</h1>
+                    <hr class="colored">
                     <p>Create alerts for trains you use to get around!</p>
                 </div>
          </div>
@@ -102,8 +106,8 @@
                 <% end %>
             </tbody>
         </table>
-                <div class="push_button blue-button">
-                  <p><%= link_to 'Add Alerts', new_alert_path %></p>
+                <div>
+                  <p id="alerts-signed-in"><%= link_to 'Add Alerts', new_alert_path, :class => 'btn btn-success' %></p>
                </div>
     <% end %>
 </div>
@@ -115,8 +119,8 @@
                 <div class="col-lg-12">
                     <h1>My alerts</h1>
                     <hr class="colored">
-                    <div class="push_button blue-button">
-                        <p><%= link_to 'Add alerts', user_session_path %></p>
+                    <div id="alerts-button"> 
+                        <p><%= link_to 'Add alerts', user_session_path, :class => 'btn btn-success' %></p>
                     </div>
 
                 </div>
@@ -151,13 +155,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>The Developers</h2>
+                <hr class="colored">
                 <div class="copy">
                     <p>
                         We love code! This is our first project from The Flatiron school and we are so excited to share it with. This project was created because we know that train schedules can be unpredictable due to a variety of circumstances. With this application you will now receive a text message anytime your train is delayed. If you are already on your way to go to work or meet with someone this application will be able to send them a precomposed email that you wrote...even if you don't have service! We hope you enjoy the Smart Alarm!
                     </p>
                 </div>    
-
-                <hr class="colored">
             </div>
         </div>
 
