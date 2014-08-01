@@ -16,8 +16,8 @@
       </div>
     <% end %>
    
-    <div class="push_button blue-button">
-     <p><%= link_to 'Add Recipients', new_recipient_path %></p>
+    <div>
+     <p><%= link_to 'Add Recipients', new_recipient_path, :class => 'btn btn-success teal-color' %></p>
     </div>
 
     <div class="text">
@@ -54,14 +54,8 @@
 </ul> 
 
 
-    <div class="text">
-      <%= f.submit %>
-    </div>
+      <div class="text">
+        <p><%= f.submit "Update Alerts", :class => 'btn btn-success teal-color' %></p>
+      </div>
     
-    <% end %>
-
-
-
-
-
-    
+    <% end %> 

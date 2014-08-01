@@ -73,6 +73,7 @@ section .container {
 }
 
 #about {
+	margin-top: 40px;
 	height: 60px;
 }
 
@@ -175,7 +176,7 @@ p .btn-primary:hover{
 }
 
 .site-name h2 {
-	margin-top: 8%;
+	margin-top: 10%;
 	margin-left: 3%;
 	font-family: 'Righteous', cursive;
 }
@@ -262,6 +263,10 @@ html body .container {
 	background-color: #a7c5bd;
 }
 
+.purple ul li a:hover {
+	background-color: #524656;
+}
+
 #up .up {
 	background-image: url(image-path('train_tracks_purple.png'));
 	padding-bottom: 2%;
@@ -334,7 +339,7 @@ p.login {
 }
 
 #welcome-back {
-	padding-top: 10%;
+	padding-top: 9%;
 	padding-left: 4%;
 }
 
@@ -455,4 +460,82 @@ section a:hover {
 	height: 300px;
 }
 
+.edit-form p .orange-color {
+	background-color: #bd5532;
+	border-color: #bd5532;
+	border-radius: 10px;
+}
 
+.edit-form p .orange-color:hover {
+	background-color: #9b4129;
+	border-color: #9b4129;
+	border-radius: 10px;
+}
+
+.edit-form p .teal-color {
+	background-color: #80BCA3;
+	border-color: #80BCA3;
+	border-radius: 10px;
+}
+
+.edit-form p .teal-color:hover {
+	background-color: #5E8E78;
+	border-color: #5E8E78;
+	border-radius: 10px;
+}
+
+#alerts .container-fluid p a {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 40px;
+	background-color: #80BCA3;
+	border-color: #80BCA3;
+	border-radius: 10px;
+}
+
+#alerts .container-fluid p a:hover {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 40px;
+	background-color: #5E8E78;
+	border-color: #5E8E78;
+	border-radius: 10px;
+}
+
+#alerts-signed-in a {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 40px;
+	background-color: #80BCA3;
+	border-color: #80BCA3;
+	border-radius: 10px;
+}
+
+#alerts-signed-in a:hover {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 40px;
+	background-color: #5E8E78;
+	border-color: #5E8E78;
+	border-radius: 10px;
+}
+
+
+.logo {
+	margin-left: 1.5%;
+	width: 72px;
+	height: 72px;
+	display: inline-block;
+	background: url(image-path('rollerover_logo.png'));
+}
+
+.logo:hover {
+	width: 72px;
+	height: 72px; 
+	background: url(image-path('rollerover_logo.png')) 0 -72px; 
+	background-color: transparent;
+}
+
+.container .navbar-collapse a:hover {
+	background-color: transparent;
+}
