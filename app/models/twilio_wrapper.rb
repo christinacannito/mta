@@ -14,9 +14,9 @@ class TwilioWrapper
 	end 
 
 	def train_status
-		name=Service.find_by(name: Alert.find(@alert_id).service_name).name
-		traffic=Service.find_by(name: (Alert.find(@alert_id).service_name).traffic
-		"#{traffic} for #{name} as of #{Time.now}."
+		name =Service.find_by(name: Alert.find(@alert_id).service_name).name
+		traffic =Service.find_by(name: (Alert.find(@alert_id).service_name)).traffic
+		"#{traffic} for #{name} as of #{Time.now.hour}:#{Time.now.min}"
 	end
 
 	def sms
