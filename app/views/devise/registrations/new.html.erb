@@ -38,20 +38,13 @@
         <%= f.password_field :password_confirmation , class: "form-control"%>
       </div>
 
-
-    <div>
-      This is where we write term and conditions. If there's too much text, the textbox can develop scrollbars to accommodate the extra text...
-    </div>
-
-    <div class="back-button">    
-      <p><%= f.submit "Sign up" %></p>
-    </div> 
+      <p><%= f.submit "Sign up", :class => 'btn btn-success orange-color' %></p>
      
     <% end %>
-
-    <div class="back-button"> 
-      <p><%= render "devise/shared/links" %></p>
-    </div>
-
+    <div class="devise-forgot purple">  
+      <ul>
+        <li><%= render "devise/shared/links" %></li>
+      </ul>
+    </div>  
   </div>
 </div>  
