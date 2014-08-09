@@ -9,18 +9,14 @@
 
 <p>
   <strong>start time:</strong>
-  <%= @alert.start.strftime('%r') %>
+  <%= @alert.start.strftime('%a %B %e, %l:%M %p') %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @alert.start.strftime('%r') %>
+  <%= @alert.end.strftime('%a %B %e, %l:%M %p') %>
 </p>
 
-<p>
-  <strong>Last sent:</strong>
-  <%= @alert.last_sent %>
-</p>
 <p>
   <strong>Service name:</strong>
   <%= @alert.service_name %>
