@@ -11,3 +11,7 @@
 every 1.minute do 
   rake "db:seed"
 end
+
+every 1.minute do
+	rake "text_each_alert"
+end
