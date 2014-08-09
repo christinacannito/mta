@@ -28,7 +28,7 @@
 
     <div class="text">
       <p> <%= f.label :start %></p>
-       <%= f.time_select(:start , { :size => "20"})%>
+       <%= f.time_select(:start , {ampm: true, minute_step: 5}, :default => {year: "2014"})%>
     </div>
 
     <div class="text">
