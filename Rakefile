@@ -16,8 +16,8 @@ task :text_each_alert => :environment do
 			 	text=TwilioWrapper.new(alert.id)
 
 			 	#Text or call
-				text.sms if Alert.sms == "sms" 
-				text.call if Alert.sms == "call"
+				# text.sms if Alert.sms == "sms" 
+				# text.call if Alert.sms == "call"
 				
 				alert.transmogrify
 				
@@ -28,8 +28,8 @@ task :text_each_alert => :environment do
 
 				text=TwilioWrapper.new(alert.id)
 				#Text or call
-				text.sms if Alert.sms == "sms" 
-				text.call if Alert.sms == "call"
+				# text.sms if Alert.sms == "sms" 
+				# text.call if Alert.sms == "call"
 			
 				alert.transmogrify	
 
