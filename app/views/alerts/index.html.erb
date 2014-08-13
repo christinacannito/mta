@@ -16,8 +16,8 @@
   <tbody>
     <% @alerts.each do |alert| %>
       <tr>
-        <td><b><font size="3" color="black"><%= alert.start %></font></b>
-        <td><b><font size="3" color="black"><%= alert.end %></font></b>
+        <td><b><font size="3" color="black"><%= alert.start.strftime("%a %B %e, %l:%M %p") %></font></b>
+        <td><b><font size="3" color="black"><%= alert.end.strftime("%a %B %e, %l:%M %p") %></font></b>
         <td><b><font size="3" color="black"><%= alert.sms %></font></b>
         <td><b><font size="3" color="black"><%= alert.email %></font></b>
         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>

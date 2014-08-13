@@ -18,6 +18,7 @@ class AlertsController < ApplicationController
   end
   
   def create
+    # DateTime.new(*(params.select { |key,value| key.start_with?("start") }.values.map(&:to_i)))
     
     @alert = Alert.new(alert_params)
     @alert.user_id = current_user
