@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809194807) do
+ActiveRecord::Schema.define(version: 20140813173012) do
 
   create_table "alerts", force: true do |t|
-    t.time     "start"
-    t.time     "end"
+    t.datetime "start"
+    t.datetime "end"
     t.integer  "user_id"
     t.integer  "recipient_id"
     t.text     "sms"
     t.text     "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.time     "last_sent"
+    t.datetime "last_sent"
     t.string   "service_name"
     t.string   "last_alert_status"
   end

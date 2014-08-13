@@ -97,8 +97,8 @@
                   <tr>
                     <td><%= "#{alert.recipient.first_name} #{alert.recipient.last_name}"%></td>
                     <td><%= alert.service_name %></td>
-                    <td><%= alert.start%></td>
-                    <td><%= alert.end %></td>
+                    <td><%= alert.start.strftime("%a %B %e, %l:%M %p") %></td>
+                    <td><%= alert.end.strftime("%a %B %e, %l:%M %p") %></td>
                     <td><%= alert.sms %></td>
                     <td><%= alert.email %></td>
                     <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
