@@ -28,12 +28,12 @@
 
     <div class="text">
       <p> <%= f.label :start %></p>
-       <%= f.time_select(:start , {ampm: true, minute_step: 5}, :default => {year: "2014"})%>
+       <%= f.time_select(:start , {ampm: true, minute_step: 5})%>
     </div>
 
     <div class="text">
       <p><%= f.label :end %></p>
-     <%= f.time_select :end %>
+     <%= f.time_select(:end , {ampm: true, minute_step: 5})%>
     </div>
     
     <!-- <div class="text">
@@ -55,7 +55,7 @@
 
 
       <div class="text">
-        <p><%= f.submit "Update Alerts", :class => 'btn btn-success teal-color' %></p>
+        <p><%= f.submit "Add Alert", :class => 'btn btn-success teal-color' %></p>
       </div>
     
     <% end %> 

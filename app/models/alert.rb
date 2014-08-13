@@ -1,7 +1,8 @@
 class Alert < ActiveRecord::Base
   belongs_to :recipient  
   has_many :services
-  	#make variable/method Service.find_by(name: self.service_name).traffic
+  validates_presence_of :start
+  validates_presence_of :end
 
 
 	def bad_service?
@@ -22,22 +23,24 @@ class Alert < ActiveRecord::Base
 
 	#checks if alert object is selected within critical timeframe of recipient
 	def relevant_time?
-		self.start < Time.now && self.end >Time.now 
+		self.start <= DateTime.now && self.end >= DateTime.now
+		# (self.start.hour <= DateTime.now.hour) (self.start.minute <= DateTime.now.minute) && (self.end.hour >	DateTime.now.hour) 
 	end
 
 	def assign_value_of_changed_status
 		self.update_attributes(last_alert_status: Service.find_by(name: self.service_name).traffic)
 	end
 
-	def reset_last_sent
-		if Time.now -alert.last > 0
-		alert.update_attributes(sent_at: nil, last_alert_status: nil) 
-		end
-	end
+	# def reset_last_sent
+	# 	if (Time.now.to_f - alert.last.to_f) % 86400  > 0
+	# 	alert.update_attributes(sent_at: nil, last_alert_status: nil) 
+	# 	end
+	# end
 
 	def transmogrify
 		assign_value_of_changed_status
-		update_attributes(last_sent: Time.now)
+		update_attributes(last_sent: DateTime.now)
+
 	end
 ###Relates to creating text to voice calls.
 	def obtain_description
