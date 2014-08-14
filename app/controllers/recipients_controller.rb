@@ -4,7 +4,7 @@ class RecipientsController < ApplicationController
   # GET /recipients
   # GET /recipients.json
   def index
-    #@recipients = Recipient.all
+    
     @recipients = current_user.recipients
     # @alert = Alert.find(params[:id])
         #redirect_to(:controller => 'alerts_controller', :action => 'show') 
