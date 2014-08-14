@@ -93,7 +93,7 @@
 
             <tbody>
 
-                <% Alert.all.each do |alert| %>
+                <% @alerts.each do |alert| %>
                   <tr>
                     <td><%= "#{alert.recipient.first_name} #{alert.recipient.last_name}"%></td>
                     <td><%= alert.service_name %></td>
