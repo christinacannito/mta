@@ -22,9 +22,7 @@
 
     <div class="text">
       <p>Select a recipient:</p>
-      
-      <%= f.collection_select :recipient_id, Recipient.all, :id, :first_name%>
-
+      <%= f.collection_select :recipient_id, current_user.recipients, :id, :first_name%>
     </div>
 
     <div class="text">
