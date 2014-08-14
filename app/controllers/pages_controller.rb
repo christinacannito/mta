@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   
   def home
-  	@alerts = current_user.alerts
+  	if current_user
+	  	@alerts = current_user.alerts
+  	else
+  		@alerts = []
+  	end
   end
 
   def about
