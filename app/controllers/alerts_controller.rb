@@ -10,17 +10,23 @@ class AlertsController < ApplicationController
    def show
     @alert = Alert.find(params[:id])
     @train_name = @alert.service_name
-
-
    end
   
-  def go
+ def go
+    @alert = Alert.find(params[:id])
+    @email = @alert.email
+
+    defualt = 'nyc.subwayalert@gmail.com'
+    recipients = [defualt, @email]
+    recipients.each do |email|
+      ConfirmationMailer.confirmation_email(@alert, email).deliver
+    end
   end
   
   def create
     
     @alert = Alert.new(alert_params)
-    @alert.user_id = current_user
+    @alert.user_id = current_user.id
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'alert was successfully created.' }

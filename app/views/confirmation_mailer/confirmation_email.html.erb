@@ -1,0 +1,24 @@
+Database test
+
+<table style="width:800px">
+  <thead>
+    <tr>
+      <th>first name</th>
+      <th>last name</th>
+      <th>service name</th>
+      <th>service status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><%= @alert.start %></td>
+        <td><%=Recipient.last.last_name %></td>
+        <td><%=Service.last.name %></td>
+        <td><%=Service.last.traffic %></td>
+      </tr>
+
+  
+  </tbody>
+</table>

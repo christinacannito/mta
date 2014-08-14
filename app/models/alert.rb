@@ -25,6 +25,10 @@ class Alert < ActiveRecord::Base
 		self.start < Time.now && self.end >Time.now 
 	end
 
+	def user_email
+		User.find(self.recipient.user_id).email
+	end
+
 	def assign_value_of_changed_status
 		self.update_attributes(last_alert_status: Service.find_by(name: self.service_name).traffic)
 	end

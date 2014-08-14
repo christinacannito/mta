@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "recipients" => "pages#recipients"
   get "alerts" => "recipients#alerts"
-  get "go" => "alerts#go", as: 'go_alert'
+  #get "go/:id" => "alerts#go", as: 'go'
+  get "go/:id" => "alerts#go", as: 'go'
   get "setting" => "pages#setting"
 
   #get "/appointmentreminder/makecall" => "twilio#makecall"

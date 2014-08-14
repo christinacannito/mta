@@ -22,7 +22,7 @@
         <td><b><font size="3" color="black"><%= alert.email %></font></b>
         <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
         <td><%= link_to 'Delete', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Send', go_alert_path %></td>
+        <td><%= link_to 'Send', go_path(alert) %></td>
       </tr>
 
     <% end %>

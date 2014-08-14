@@ -4,14 +4,23 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
+task :email => :environment do
+	Alert.all.each do |alert|
+		if alert.changed_service?
+			ConfirmationMailer.confirmation_email(alert, User.find(alert.recipient.user_id).email).deliver
+		elsif alert.new_bad_service?
+			ConfirmationMailer.confirmation_email(alert,alert.email).deliver
+			#ConfirmationMailer.confirmation_email(alert,User.find(alert.recipient.user_id).email).deliver			
+		end	
+	end	
+end
+
+
 
 
 task :text_each_alert => :environment do
 		Alert.all.each do |alert|
-	
-		# If alert.relevant_time?
-			
-			
+
 			 if alert.changed_service?
 			 	text=TwilioWrapper.new(alert.id)
 
@@ -33,10 +42,10 @@ task :text_each_alert => :environment do
 			
 				alert.transmogrify	
 
-			end	
+				
 
 		end
-	#end
+	end
 end
 
 
