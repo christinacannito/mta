@@ -18,6 +18,7 @@ class AlertsController < ApplicationController
   end
   
   def create
+
     @alert = Alert.new(alert_params)
     @alert.user_id = current_user.id
     respond_to do |format|
