@@ -9,11 +9,15 @@ Rails.application.load_tasks
 task :text_each_alert => :environment do
 		Alert.all.each do |alert|
 	
-		# If alert.relevant_time?
+		
 			
 			
 			 if alert.changed_service?
-			 	text=TwilioWrapper.new(alert.id)
+			 	
+				text=TwilioWrapper.new(alert.id)
+			 	puts "alert object created for changed service"
+			 	puts text.sms
+			 	puts "triggered text to #{text.recipient_number}"
 
 			 	#Text or call
 				# text.sms if Alert.sms == "sms" 
@@ -27,6 +31,10 @@ task :text_each_alert => :environment do
 			 elsif alert.new_bad_service?
 
 				text=TwilioWrapper.new(alert.id)
+				# binding.pry
+				puts "alert object created for new bad service"
+				text.sms
+				puts "triggered text to #{text.recipient_number}"
 				#Text or call
 				# text.sms if Alert.sms == "sms" 
 				# text.call if Alert.sms == "call"
