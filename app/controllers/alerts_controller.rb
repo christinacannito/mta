@@ -10,15 +10,9 @@ class AlertsController < ApplicationController
    def show
     @alert = Alert.find(params[:id])
     @train_name = @alert.service_name
-
-
    end
   
-  def go
-  end
-  
-  def create
-
+  def create  
     @alert = Alert.new(alert_params)
     @alert.user_id = current_user.id
     respond_to do |format|
