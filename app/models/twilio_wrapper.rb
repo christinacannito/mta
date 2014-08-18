@@ -6,8 +6,6 @@ class TwilioWrapper
 		@from =  ENV["PHONE"]
 		@alert_id=alert_id
 	end
-
-
 		
 	def recipient_number
 		Alert.find(@alert_id).recipient.phone_number
