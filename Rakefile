@@ -9,9 +9,9 @@ Rails.application.load_tasks
 task :text_each_alert => :environment do
 		Alert.all.each do |alert|
 	
-		
 			
 			
+			if alert.relevant_time?
 			 if alert.changed_service?
 			 	
 				text=TwilioWrapper.new(alert.id)
@@ -40,11 +40,9 @@ task :text_each_alert => :environment do
 				# text.call if Alert.sms == "call"
 			
 				alert.transmogrify	
-
+			end
 			end	
-
-		end
-	#end
+		end	
 end
 
 
