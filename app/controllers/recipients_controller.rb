@@ -10,7 +10,9 @@ class RecipientsController < ApplicationController
   # GET /recipients/1
   # GET /recipients/1.json
   def show 
-    current_user.recipients.find(params[:id])
+    @recipiant = current_user.recipients.find(params[:id])
+     rescue ActiveRecord::RecordNotFound
+    redirect_to root_path
   end
 
   # GET /recipients/new
@@ -21,6 +23,8 @@ class RecipientsController < ApplicationController
   # GET /recipients/1/edit
   def edit  
     current_user.recipients.find(params[:id])
+     rescue ActiveRecord::RecordNotFound
+    redirect_to root_path
   end
 
   # POST /recipients
