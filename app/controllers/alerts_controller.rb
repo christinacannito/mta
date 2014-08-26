@@ -8,7 +8,7 @@ class AlertsController < ApplicationController
    end
 
    def show
-    @alert = Alert.find(params[:id])
+    @alert = current_user.alerts.find(params[:id])
     @train_name = @alert.service_name
    end
   
@@ -25,7 +25,8 @@ class AlertsController < ApplicationController
   end
 
   def edit
-    @alert = Alert.find(params[:id])
+    @alert= current_user.alerts.find(params[:id])
+    # @alert = Alert.find(params[:id])
   end
 
   def update

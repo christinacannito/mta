@@ -9,15 +9,8 @@ class RecipientsController < ApplicationController
 
   # GET /recipients/1
   # GET /recipients/1.json
-  def show
-    # if current_user 
-    #  current_user.recipients
-    # else 
-    #   redirect_to root_url
-  
-    # @recipient = Recipient.find(params[:id])
-    # @alert = Alert.find(params[:id])
-    #redirect_to(:controller => 'alerts_controller', :action => 'index') 
+  def show 
+    current_user.recipients.find(params[:id])
   end
 
   # GET /recipients/new
@@ -26,12 +19,8 @@ class RecipientsController < ApplicationController
   end
 
   # GET /recipients/1/edit
-  def edit
-    if current_user
-      current_user.recipients
-    else 
-     redirect_to root_url 
-   end
+  def edit  
+    current_user.recipients.find(params[:id])
   end
 
   # POST /recipients
