@@ -20,3 +20,4 @@
 config/application.yml
 config/secrets.yml
 config/s3.yml
+config/s3.yml
